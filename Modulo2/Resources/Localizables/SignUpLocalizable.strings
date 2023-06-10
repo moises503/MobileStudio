@@ -1,0 +1,13 @@
+/* 
+  SignUpLocalizable.strings
+  Modulo2
+
+  Created by Moisés  Garduño Reyes on 10/06/23.
+  
+*/
+
+"sign_up_name_error_message" = "Debes proporcionar un nombre válido";
+"sign_up_last_name_error_message" = "Debes proporcionar un apellido válido";
+"sign_up_email_error_message" = "Debes proporcionar un correo electrónico válido";
+"sign_up_age_error_message" = "Debes proporcionar una fecha de nacimiento válida";
+"sign_up_success_message" = "Felicidades el usuario fue registrado";

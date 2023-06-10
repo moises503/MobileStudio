@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		D6F56D4F2A34CBAB0084EBDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D4E2A34CBAB0084EBDA /* AppDelegate.swift */; };
 		D6F56D512A34CBAB0084EBDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D502A34CBAB0084EBDA /* SceneDelegate.swift */; };
-		D6F56D532A34CBAB0084EBDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D522A34CBAB0084EBDA /* ViewController.swift */; };
+		D6F56D532A34CBAB0084EBDA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D522A34CBAB0084EBDA /* SignUpViewController.swift */; };
 		D6F56D562A34CBAB0084EBDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F56D542A34CBAB0084EBDA /* Main.storyboard */; };
 		D6F56D582A34CBAC0084EBDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F56D572A34CBAC0084EBDA /* Assets.xcassets */; };
 		D6F56D5B2A34CBAC0084EBDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F56D592A34CBAC0084EBDA /* LaunchScreen.storyboard */; };
 		D6F56D662A34CBAC0084EBDA /* Modulo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D652A34CBAC0084EBDA /* Modulo2Tests.swift */; };
 		D6F56D702A34CBAD0084EBDA /* Modulo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D6F2A34CBAD0084EBDA /* Modulo2UITests.swift */; };
 		D6F56D722A34CBAD0084EBDA /* Modulo2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D712A34CBAD0084EBDA /* Modulo2UITestsLaunchTests.swift */; };
+		D6F56D7F2A34F4DA0084EBDA /* LocalizableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D7E2A34F4DA0084EBDA /* LocalizableProtocol.swift */; };
+		D6F56D832A34F8060084EBDA /* SignUpLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6F56D822A34F8060084EBDA /* SignUpLocalizable.strings */; };
+		D6F56D872A34F8D10084EBDA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D862A34F8D10084EBDA /* String+Extensions.swift */; };
+		D6F56D892A34F8ED0084EBDA /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D882A34F8ED0084EBDA /* UITextField+Extensions.swift */; };
+		D6F56D8F2A34FA890084EBDA /* SignUpLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D8E2A34FA890084EBDA /* SignUpLocalizable.swift */; };
+		D6F56D912A34FAE10084EBDA /* SignUpMessageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D902A34FAE10084EBDA /* SignUpMessageKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,7 @@
 		D6F56D4B2A34CBAB0084EBDA /* Modulo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modulo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F56D4E2A34CBAB0084EBDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6F56D502A34CBAB0084EBDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6F56D522A34CBAB0084EBDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6F56D522A34CBAB0084EBDA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D6F56D552A34CBAB0084EBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6F56D572A34CBAC0084EBDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6F56D5A2A34CBAC0084EBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		D6F56D6B2A34CBAD0084EBDA /* Modulo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Modulo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F56D6F2A34CBAD0084EBDA /* Modulo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modulo2UITests.swift; sourceTree = "<group>"; };
 		D6F56D712A34CBAD0084EBDA /* Modulo2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modulo2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6F56D7E2A34F4DA0084EBDA /* LocalizableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableProtocol.swift; sourceTree = "<group>"; };
+		D6F56D822A34F8060084EBDA /* SignUpLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = SignUpLocalizable.strings; sourceTree = "<group>"; };
+		D6F56D862A34F8D10084EBDA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D6F56D882A34F8ED0084EBDA /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		D6F56D8E2A34FA890084EBDA /* SignUpLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocalizable.swift; sourceTree = "<group>"; };
+		D6F56D902A34FAE10084EBDA /* SignUpMessageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMessageKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,11 @@
 		D6F56D4D2A34CBAB0084EBDA /* Modulo2 */ = {
 			isa = PBXGroup;
 			children = (
+				D6F56D852A34F8BF0084EBDA /* Core */,
+				D6F56D842A34F8B70084EBDA /* Modules */,
+				D6F56D802A34F7690084EBDA /* Resources */,
 				D6F56D4E2A34CBAB0084EBDA /* AppDelegate.swift */,
 				D6F56D502A34CBAB0084EBDA /* SceneDelegate.swift */,
-				D6F56D522A34CBAB0084EBDA /* ViewController.swift */,
 				D6F56D542A34CBAB0084EBDA /* Main.storyboard */,
 				D6F56D572A34CBAC0084EBDA /* Assets.xcassets */,
 				D6F56D592A34CBAC0084EBDA /* LaunchScreen.storyboard */,
@@ -125,6 +139,74 @@
 				D6F56D712A34CBAD0084EBDA /* Modulo2UITestsLaunchTests.swift */,
 			);
 			path = Modulo2UITests;
+			sourceTree = "<group>";
+		};
+		D6F56D802A34F7690084EBDA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D812A34F7760084EBDA /* Localizables */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6F56D812A34F7760084EBDA /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D822A34F8060084EBDA /* SignUpLocalizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		D6F56D842A34F8B70084EBDA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D8C2A34F97C0084EBDA /* SignUp */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D6F56D852A34F8BF0084EBDA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D8B2A34F9290084EBDA /* Localizable */,
+				D6F56D8A2A34F91B0084EBDA /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D6F56D8A2A34F91B0084EBDA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D862A34F8D10084EBDA /* String+Extensions.swift */,
+				D6F56D882A34F8ED0084EBDA /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6F56D8B2A34F9290084EBDA /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D7E2A34F4DA0084EBDA /* LocalizableProtocol.swift */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		D6F56D8C2A34F97C0084EBDA /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D8D2A34FA270084EBDA /* Localizable */,
+				D6F56D522A34CBAB0084EBDA /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D6F56D8D2A34FA270084EBDA /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				D6F56D8E2A34FA890084EBDA /* SignUpLocalizable.swift */,
+				D6F56D902A34FAE10084EBDA /* SignUpMessageKeys.swift */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6F56D5B2A34CBAC0084EBDA /* LaunchScreen.storyboard in Resources */,
+				D6F56D832A34F8060084EBDA /* SignUpLocalizable.strings in Resources */,
 				D6F56D582A34CBAC0084EBDA /* Assets.xcassets in Resources */,
 				D6F56D562A34CBAB0084EBDA /* Main.storyboard in Resources */,
 			);
@@ -258,9 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6F56D532A34CBAB0084EBDA /* ViewController.swift in Sources */,
+				D6F56D872A34F8D10084EBDA /* String+Extensions.swift in Sources */,
+				D6F56D912A34FAE10084EBDA /* SignUpMessageKeys.swift in Sources */,
+				D6F56D7F2A34F4DA0084EBDA /* LocalizableProtocol.swift in Sources */,
+				D6F56D532A34CBAB0084EBDA /* SignUpViewController.swift in Sources */,
+				D6F56D892A34F8ED0084EBDA /* UITextField+Extensions.swift in Sources */,
 				D6F56D4F2A34CBAB0084EBDA /* AppDelegate.swift in Sources */,
 				D6F56D512A34CBAB0084EBDA /* SceneDelegate.swift in Sources */,
+				D6F56D8F2A34FA890084EBDA /* SignUpLocalizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
