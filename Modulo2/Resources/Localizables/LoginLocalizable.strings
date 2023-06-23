@@ -1,0 +1,15 @@
+/* 
+  LoginLocalizable.strings
+  Modulo2
+
+  Created by Moisés  Garduño Reyes on 17/06/23.
+  
+*/
+
+"login_email_hint" = "Introduce tu correo electrónico";
+"login_password_hint" = "Introduce tu contraseña";
+"login_button_hint" = "Iniciar sesión";
+"login_error_message" = "Tu usuario y/o contraseña no es válido";
+"login_error_title" = "Ha ocurrido un error";
+"login_prompt_accept" = "Aceptar";
+"login_prompt_cancel" = "Cancelar";
