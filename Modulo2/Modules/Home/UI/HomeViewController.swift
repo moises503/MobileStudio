@@ -88,10 +88,27 @@ class HomeViewController: UIViewController {
                 id: "\(index)",
                 name: "Information \(index)",
                 address: "Information about \(index)",
-                isFavorite: false,
-                services: [.backery, .coffee]
+                image: UIImage(named: "coffeePlaceholder"),
+                isFavorite: isFavorite(with: index),
+                services: getServices(using: index)
             )
             )
+        }
+    }
+    
+    private func isFavorite(with index: Int) -> Bool {
+        if index % 2 == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    private func getServices(using index: Int) -> [CoffeeShopServices] {
+        if index % 2 == 0 {
+            return [.backery, .coffee]
+        } else {
+            return [.backery, .coffee, .petFriendly]
         }
     }
 }

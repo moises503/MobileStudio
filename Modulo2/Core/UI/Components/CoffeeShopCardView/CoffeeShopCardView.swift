@@ -13,7 +13,7 @@ class CoffeeShopCardView: UIView {
     private lazy var coffeeShopImageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "coffeePlaceholder")
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleToFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -53,7 +53,7 @@ class CoffeeShopCardView: UIView {
         view.axis = .horizontal
         view.distribution = .fillProportionally
         view.alignment = .fill
-        view.spacing = 2
+        view.spacing = 4
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isUserInteractionEnabled = false
         return view
@@ -95,6 +95,25 @@ class CoffeeShopCardView: UIView {
         didSet {
             coffeeShopTitleLabel.text = coffeeShopView?.name
             coffeeShopAddressLabel.text = coffeeShopView?.address
+            if coffeeShopView?.isFavorite == true {
+                coffeeShopFavoriteImageView.image = UIImage(named: "favoriteFilled")
+            } else {
+                coffeeShopFavoriteImageView.image = UIImage(named: "favorite")
+            }
+            coffeeShopImageView.image = coffeeShopView?.image
+            let services: [CoffeeShopServices] = coffeeShopView?.services ?? []
+            services.forEach { service in
+                switch service {
+                case .petFriendly:
+                    coffeeShopAvailableServicesStackView.addArrangedSubview(petFriendlyIconImageView)
+                case .coffee:
+                    coffeeShopAvailableServicesStackView.addArrangedSubview(coffeeIconImageView)
+                case .backery:
+                    coffeeShopAvailableServicesStackView.addArrangedSubview(bakeryIconImageView)
+                case .food:
+                    coffeeShopAvailableServicesStackView.addArrangedSubview(wifiIconImageView)
+                }
+            }
         }
     }
     
@@ -111,11 +130,6 @@ class CoffeeShopCardView: UIView {
     private func setupViews() {
         backgroundColor = .white
         layer.cornerRadius = 32
-        
-        coffeeShopAvailableServicesStackView.addArrangedSubview(coffeeIconImageView)
-        coffeeShopAvailableServicesStackView.addArrangedSubview(bakeryIconImageView)
-        coffeeShopAvailableServicesStackView.addArrangedSubview(petFriendlyIconImageView)
-        coffeeShopAvailableServicesStackView.addArrangedSubview(wifiIconImageView)
 
         addSubview(coffeeShopImageView)
         addSubview(coffeeShopTitleLabel)
@@ -138,7 +152,8 @@ class CoffeeShopCardView: UIView {
             coffeeShopImageView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             coffeeShopImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
             coffeeShopImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            coffeeShopImageView.widthAnchor.constraint(greaterThanOrEqualToConstant: 86),
+            coffeeShopImageView.widthAnchor.constraint(equalToConstant: 120),
+            coffeeShopImageView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100),
             
             coffeeShopFavoriteImageView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
             coffeeShopFavoriteImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
@@ -147,10 +162,10 @@ class CoffeeShopCardView: UIView {
             
             coffeeShopTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 18),
             coffeeShopTitleLabel.leadingAnchor.constraint(equalTo: coffeeShopImageView.trailingAnchor, constant: 8),
-            coffeeShopTitleLabel.trailingAnchor.constraint(equalTo: coffeeShopFavoriteImageView.leadingAnchor, constant: -4),
+            coffeeShopTitleLabel.trailingAnchor.constraint(lessThanOrEqualTo: coffeeShopFavoriteImageView.leadingAnchor, constant: -4),
             
             coffeeShopAddressLabel.topAnchor.constraint(equalTo: coffeeShopTitleLabel.bottomAnchor, constant: 4),
-            coffeeShopAddressLabel.leadingAnchor.constraint(equalTo: coffeeShopImageView.trailingAnchor, constant: 8),
+            coffeeShopAddressLabel.leadingAnchor.constraint(lessThanOrEqualTo: coffeeShopImageView.trailingAnchor, constant: 8),
             coffeeShopAddressLabel.trailingAnchor.constraint(equalTo: coffeeShopFavoriteImageView.leadingAnchor, constant: -4),
             
             coffeeShopAvailableServicesStackView.topAnchor.constraint(equalTo: coffeeShopAddressLabel.bottomAnchor, constant: 8),
