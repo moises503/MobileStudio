@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     private var scrollableContent: UIScrollView = {
         let view = UIScrollView()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .lightGray
         view.isDirectionalLockEnabled = true
         view.alwaysBounceVertical = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     
     private lazy var contentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     private lazy var coffeeShopsTableView: UIHeightResizableTableView = {
         let tableView = UIHeightResizableTableView()
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .systemBackground
+        tableView.backgroundColor = .lightGray
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(CoffeeShopTableViewCell.self, forCellReuseIdentifier: "userInformationCell")
@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     private lazy var bottomConstraint = coffeeShopsTableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
-    private var coffeeShopViews: [CoffeShopView] = []
+    private var coffeeShopViews: [CoffeeShopView] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,14 @@ class HomeViewController: UIViewController {
     
     private func populateUserInformation() {
         for index in 1...40 {
-            coffeeShopViews.append(CoffeShopView(title: "Information \(index)", content: "Information about \(index)"))
+            coffeeShopViews.append(CoffeeShopView(
+                id: "\(index)",
+                name: "Information \(index)",
+                address: "Information about \(index)",
+                isFavorite: false,
+                services: [.backery, .coffee]
+            )
+            )
         }
     }
 }
@@ -99,7 +106,7 @@ extension HomeViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userInformationCell") as? CoffeeShopTableViewCell else {
             return UITableViewCell()
         }
-        //cell.userInformation = userInformationArray[indexPath.row]
+        cell.coffeeShopView = coffeeShopViews[indexPath.row]
         return cell
     }
 }
