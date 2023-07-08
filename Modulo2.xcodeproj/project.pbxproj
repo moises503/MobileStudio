@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6966E6F2A4773F800374EB3 /* UserInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6966E6E2A4773F800374EB3 /* UserInformationTableViewCell.swift */; };
 		D69D2C182A3E0616004E689F /* SignUpFromScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D2C172A3E0616004E689F /* SignUpFromScratchViewController.swift */; };
 		D69D2C1A2A3E302D004E689F /* LoginLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D69D2C192A3E302D004E689F /* LoginLocalizable.strings */; };
 		D69D2C1D2A3E3072004E689F /* LoginLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D2C1C2A3E3072004E689F /* LoginLocalizable.swift */; };
@@ -17,6 +18,7 @@
 		D69D2C292A3E42EC004E689F /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D2C282A3E42EC004E689F /* LoginViewProtocol.swift */; };
 		D69D2C2B2A3E4303004E689F /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D2C2A2A3E4303004E689F /* LoginPresenterProtocol.swift */; };
 		D69D2C2D2A3E4388004E689F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D2C2C2A3E4388004E689F /* LoginPresenter.swift */; };
+		D6CB573F2A477DC0000768C2 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB573E2A477DC0000768C2 /* UserInformation.swift */; };
 		D6F56D4F2A34CBAB0084EBDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D4E2A34CBAB0084EBDA /* AppDelegate.swift */; };
 		D6F56D512A34CBAB0084EBDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D502A34CBAB0084EBDA /* SceneDelegate.swift */; };
 		D6F56D532A34CBAB0084EBDA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D522A34CBAB0084EBDA /* SignUpViewController.swift */; };
@@ -53,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6966E6E2A4773F800374EB3 /* UserInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTableViewCell.swift; sourceTree = "<group>"; };
 		D69D2C172A3E0616004E689F /* SignUpFromScratchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFromScratchViewController.swift; sourceTree = "<group>"; };
 		D69D2C192A3E302D004E689F /* LoginLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LoginLocalizable.strings; sourceTree = "<group>"; };
 		D69D2C1C2A3E3072004E689F /* LoginLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLocalizable.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		D69D2C282A3E42EC004E689F /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		D69D2C2A2A3E4303004E689F /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		D69D2C2C2A3E4388004E689F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		D6CB573E2A477DC0000768C2 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		D6F56D4B2A34CBAB0084EBDA /* Modulo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modulo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F56D4E2A34CBAB0084EBDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6F56D502A34CBAB0084EBDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				D69D2C212A3E3B40004E689F /* HomeViewController.swift */,
+				D6966E6E2A4773F800374EB3 /* UserInformationTableViewCell.swift */,
+				D6CB573E2A477DC0000768C2 /* UserInformation.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				D6F56D872A34F8D10084EBDA /* String+Extensions.swift in Sources */,
 				D6F56D912A34FAE10084EBDA /* SignUpLocalizableKeys.swift in Sources */,
 				D69D2C182A3E0616004E689F /* SignUpFromScratchViewController.swift in Sources */,
+				D6CB573F2A477DC0000768C2 /* UserInformation.swift in Sources */,
 				D6F56D7F2A34F4DA0084EBDA /* LocalizableProtocol.swift in Sources */,
 				D69D2C272A3E3BC5004E689F /* AlertMessage.swift in Sources */,
 				D6F56D532A34CBAB0084EBDA /* SignUpViewController.swift in Sources */,
@@ -425,6 +432,7 @@
 				D6F56D512A34CBAB0084EBDA /* SceneDelegate.swift in Sources */,
 				D69D2C222A3E3B40004E689F /* HomeViewController.swift in Sources */,
 				D6F56D8F2A34FA890084EBDA /* SignUpLocalizable.swift in Sources */,
+				D6966E6F2A4773F800374EB3 /* UserInformationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
