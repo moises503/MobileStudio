@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserInformation {
+struct CoffeShopView {
     var title: String
     var content: String
 }
