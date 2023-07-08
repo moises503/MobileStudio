@@ -16,7 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = instantiateRootNavController(rootViewController: LoginViewController())
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,5 +51,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+    private func instantiateRootNavController(rootViewController: UIViewController) -> UINavigationController {
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.prefersLargeTitles = true
+        
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.label]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.label]
+            navBarAppearance.backgroundColor = .systemGroupedBackground
+            navigationController.navigationBar.standardAppearance = navBarAppearance
+            navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
+        } else {
+            navigationController.navigationBar.barTintColor = .systemBackground
+            navigationController.navigationBar.tintColor = UIColor.black
+        }
+
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.label,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1)
+        ]
+
+        navigationController.navigationBar.largeTitleTextAttributes = attrs
+        
+        return navigationController
+    }
 }
 

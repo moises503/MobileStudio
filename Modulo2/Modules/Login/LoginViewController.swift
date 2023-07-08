@@ -81,6 +81,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Iniciar sesión"
         setupViews()
         presenter = LoginPresenter()
         presenter?.attachView(view: self)
