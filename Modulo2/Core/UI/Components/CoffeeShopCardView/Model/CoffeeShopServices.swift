@@ -9,7 +9,7 @@ import Foundation
 
 enum CoffeeShopServices {
     case coffee
-    case food
+    case wifi
     case backery
     case petFriendly
 }

@@ -14,5 +14,5 @@ protocol CoffeeShopViewProtocol: AnyObject {
     func petFriendlyAvalaible()
     func bakeryAvailable()
     func coffeeAvailable()
-    func foodAvailable()
+    func wifiAvailbale()
 }

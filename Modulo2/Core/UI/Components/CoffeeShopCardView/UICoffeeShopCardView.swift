@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CoffeeShopCardView: UIView {
+class UICoffeeShopCardView: UIView {
     
     private lazy var coffeeShopImageView: UIImageView = {
         let view = UIImageView()
@@ -91,35 +91,19 @@ class CoffeeShopCardView: UIView {
         return view
     }()
     
+    private var presenter: CoffeeShopPresenterProtocol?
+    
     var coffeeShopView: CoffeeShopView? {
         didSet {
-            coffeeShopTitleLabel.text = coffeeShopView?.name
-            coffeeShopAddressLabel.text = coffeeShopView?.address
-            if coffeeShopView?.isFavorite == true {
-                coffeeShopFavoriteImageView.image = UIImage(named: "favoriteFilled")
-            } else {
-                coffeeShopFavoriteImageView.image = UIImage(named: "favorite")
-            }
-            coffeeShopImageView.image = coffeeShopView?.image
-            let services: [CoffeeShopServices] = coffeeShopView?.services ?? []
-            services.forEach { service in
-                switch service {
-                case .petFriendly:
-                    coffeeShopAvailableServicesStackView.addArrangedSubview(petFriendlyIconImageView)
-                case .coffee:
-                    coffeeShopAvailableServicesStackView.addArrangedSubview(coffeeIconImageView)
-                case .backery:
-                    coffeeShopAvailableServicesStackView.addArrangedSubview(bakeryIconImageView)
-                case .food:
-                    coffeeShopAvailableServicesStackView.addArrangedSubview(wifiIconImageView)
-                }
-            }
+            presenter?.renderCoffeeShopView(using: coffeeShopView)
         }
     }
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        presenter = CoffeeShopPresenter()
+        presenter?.attachView(view: self)
         setupViews()
     }
     
@@ -172,5 +156,39 @@ class CoffeeShopCardView: UIView {
             coffeeShopAvailableServicesStackView.leadingAnchor.constraint(equalTo: coffeeShopImageView.trailingAnchor, constant: 8),
             coffeeShopAvailableServicesStackView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -8),
         ])
+    }
+}
+
+
+extension UICoffeeShopCardView: CoffeeShopViewProtocol {
+    
+    func displayCoffeeShopView(with coffeeShopView: CoffeeShopView) {
+        coffeeShopTitleLabel.text = coffeeShopView.name
+        coffeeShopAddressLabel.text = coffeeShopView.address
+        coffeeShopImageView.image = coffeeShopView.image
+    }
+    
+    func markAsFavorite() {
+        coffeeShopFavoriteImageView.image = UIImage(named: "favoriteFilled")
+    }
+    
+    func markAsNonFavorite() {
+        coffeeShopFavoriteImageView.image = UIImage(named: "favorite")
+    }
+    
+    func petFriendlyAvalaible() {
+        coffeeShopAvailableServicesStackView.addArrangedSubview(petFriendlyIconImageView)
+    }
+    
+    func bakeryAvailable() {
+        coffeeShopAvailableServicesStackView.addArrangedSubview(bakeryIconImageView)
+    }
+    
+    func coffeeAvailable() {
+        coffeeShopAvailableServicesStackView.addArrangedSubview(coffeeIconImageView)
+    }
+    
+    func wifiAvailbale() {
+        coffeeShopAvailableServicesStackView.addArrangedSubview(wifiIconImageView)
     }
 }

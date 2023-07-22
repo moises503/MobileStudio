@@ -9,5 +9,5 @@ import Foundation
 
 protocol CoffeeShopPresenterProtocol {
     func attachView(view: CoffeeShopViewProtocol)
-    func renderCoffeeShopView(using coffeeShopView: CoffeeShopView)
+    func renderCoffeeShopView(using coffeeShopView: CoffeeShopView?)
 }

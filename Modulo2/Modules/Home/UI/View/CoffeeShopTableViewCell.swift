@@ -9,8 +9,8 @@ import UIKit
 
 class CoffeeShopTableViewCell: UITableViewCell {
     
-    private lazy var coffeeShopCardView: CoffeeShopCardView = {
-        let view = CoffeeShopCardView()
+    private lazy var coffeeShopCardView: UICoffeeShopCardView = {
+        let view = UICoffeeShopCardView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
