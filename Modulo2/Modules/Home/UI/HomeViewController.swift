@@ -25,6 +25,15 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    private lazy var addressLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private lazy var coffeeShopsTableView: UIHeightResizableTableView = {
         let tableView = UIHeightResizableTableView()
         tableView.separatorStyle = .none
@@ -64,6 +73,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(scrollableContent)
         scrollableContent.addSubview(contentView)
+        contentView.addSubview(addressLabel)
         contentView.addSubview(coffeeShopsTableView)
         
         NSLayoutConstraint.activate([
@@ -78,7 +88,11 @@ class HomeViewController: UIViewController {
             contentView.bottomAnchor.constraint(equalTo: contentLayoutGuide.bottomAnchor),
             contentView.widthAnchor.constraint(equalTo: frameLayoutGuide.widthAnchor),
             
-            coffeeShopsTableView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            addressLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            addressLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            addressLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            
+            coffeeShopsTableView.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 16),
             coffeeShopsTableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
             coffeeShopsTableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
             bottomConstraint
@@ -143,7 +157,7 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: HomeViewProtocol {
     
     func showDefaultLocation(with favoriteLocation: Location) {
-        print("DEFAULT: \(favoriteLocation)")
+        addressLabel.text = favoriteLocation.toLocationString()
     }
     
     func showCoffeeShops(with coffeeShopsList: [CoffeeShop]) {

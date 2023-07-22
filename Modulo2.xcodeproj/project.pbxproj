@@ -42,6 +42,16 @@
 		D6F56D942A350C740084EBDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D932A350C740084EBDA /* LoginViewController.swift */; };
 		DF604E7F2A6C54EE00CEA365 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E7E2A6C54EE00CEA365 /* CoffeeShop.swift */; };
 		DF604E822A6C565400CEA365 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E812A6C565400CEA365 /* HomeModule.swift */; };
+		DF604E852A6C5C3700CEA365 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E842A6C5C3700CEA365 /* Mapper.swift */; };
+		DF604E882A6C5D0000CEA365 /* LocationToLocationStringMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E872A6C5D0000CEA365 /* LocationToLocationStringMapper.swift */; };
+		DF604E8A2A6C5DAC00CEA365 /* LocationMapper+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E892A6C5DAC00CEA365 /* LocationMapper+Extensions.swift */; };
+		DF604E8C2A6C662200CEA365 /* CoffeeShopsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E8B2A6C662200CEA365 /* CoffeeShopsResponse.swift */; };
+		DF604E8E2A6C673F00CEA365 /* CoffeeShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E8D2A6C673E00CEA365 /* CoffeeShopItem.swift */; };
+		DF604E902A6C6AA900CEA365 /* HomeDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E8F2A6C6AA900CEA365 /* HomeDataSourceProtocol.swift */; };
+		DF604E922A6C6AE000CEA365 /* LocationParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E912A6C6AE000CEA365 /* LocationParams.swift */; };
+		DF604E942A6C6B3800CEA365 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E932A6C6B3800CEA365 /* HomeDataSource.swift */; };
+		DF604E962A6C6B8400CEA365 /* HomeActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E952A6C6B8400CEA365 /* HomeActionResult.swift */; };
+		DF604E982A6C6C3000CEA365 /* CoffeeAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E972A6C6C3000CEA365 /* CoffeeAppError.swift */; };
 		DF8569912A6C32890092CF82 /* CoffeeShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */; };
 		DF8569982A6C40370092CF82 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */; };
 		DF85699A2A6C40410092CF82 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */; };
@@ -125,6 +135,16 @@
 		D6F56D932A350C740084EBDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DF604E7E2A6C54EE00CEA365 /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		DF604E812A6C565400CEA365 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		DF604E842A6C5C3700CEA365 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		DF604E872A6C5D0000CEA365 /* LocationToLocationStringMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationToLocationStringMapper.swift; sourceTree = "<group>"; };
+		DF604E892A6C5DAC00CEA365 /* LocationMapper+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationMapper+Extensions.swift"; sourceTree = "<group>"; };
+		DF604E8B2A6C662200CEA365 /* CoffeeShopsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsResponse.swift; sourceTree = "<group>"; };
+		DF604E8D2A6C673E00CEA365 /* CoffeeShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopItem.swift; sourceTree = "<group>"; };
+		DF604E8F2A6C6AA900CEA365 /* HomeDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceProtocol.swift; sourceTree = "<group>"; };
+		DF604E912A6C6AE000CEA365 /* LocationParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationParams.swift; sourceTree = "<group>"; };
+		DF604E932A6C6B3800CEA365 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		DF604E952A6C6B8400CEA365 /* HomeActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionResult.swift; sourceTree = "<group>"; };
+		DF604E972A6C6C3000CEA365 /* CoffeeAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeAppError.swift; sourceTree = "<group>"; };
 		DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopPresenter.swift; sourceTree = "<group>"; };
 		DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenterProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomePresenterProtocol.swift; sourceTree = SOURCE_ROOT; };
 		DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomeViewProtocol.swift; sourceTree = SOURCE_ROOT; };
@@ -221,6 +241,7 @@
 		D615BB492A59C29700D8238D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DF604E862A6C5CE500CEA365 /* Mapper */,
 				D615BB4A2A59C2AA00D8238D /* View */,
 				D69D2C212A3E3B40004E689F /* HomeViewController.swift */,
 			);
@@ -387,6 +408,7 @@
 		D6F56D852A34F8BF0084EBDA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DF604E832A6C5C2C00CEA365 /* Arch */,
 				D615BB442A59BB5200D8238D /* UI */,
 				D69D2C252A3E3BB5004E689F /* Models */,
 				D6F56D8B2A34F9290084EBDA /* Localizable */,
@@ -452,6 +474,24 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		DF604E832A6C5C2C00CEA365 /* Arch */ = {
+			isa = PBXGroup;
+			children = (
+				DF604E842A6C5C3700CEA365 /* Mapper.swift */,
+				DF604E972A6C6C3000CEA365 /* CoffeeAppError.swift */,
+			);
+			path = Arch;
+			sourceTree = "<group>";
+		};
+		DF604E862A6C5CE500CEA365 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DF604E872A6C5D0000CEA365 /* LocationToLocationStringMapper.swift */,
+				DF604E892A6C5DAC00CEA365 /* LocationMapper+Extensions.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		DF8569922A6C40060092CF82 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +504,8 @@
 			isa = PBXGroup;
 			children = (
 				DF8569962A6C40230092CF82 /* Model */,
+				DF604E8F2A6C6AA900CEA365 /* HomeDataSourceProtocol.swift */,
+				DF604E932A6C6B3800CEA365 /* HomeDataSource.swift */,
 			);
 			path = Datasource;
 			sourceTree = "<group>";
@@ -471,7 +513,9 @@
 		DF8569952A6C401C0092CF82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF604E952A6C6B8400CEA365 /* HomeActionResult.swift */,
 				DF604E7E2A6C54EE00CEA365 /* CoffeeShop.swift */,
+				DF604E912A6C6AE000CEA365 /* LocationParams.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -479,6 +523,8 @@
 		DF8569962A6C40230092CF82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF604E8B2A6C662200CEA365 /* CoffeeShopsResponse.swift */,
+				DF604E8D2A6C673E00CEA365 /* CoffeeShopItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -771,18 +817,23 @@
 				D6F56D912A34FAE10084EBDA /* SignUpLocalizableKeys.swift in Sources */,
 				D69D2C182A3E0616004E689F /* SignUpFromScratchViewController.swift in Sources */,
 				D6CB573F2A477DC0000768C2 /* CoffeeShopView.swift in Sources */,
+				DF604E902A6C6AA900CEA365 /* HomeDataSourceProtocol.swift in Sources */,
 				D6F56D7F2A34F4DA0084EBDA /* LocalizableProtocol.swift in Sources */,
 				D69D2C272A3E3BC5004E689F /* AlertMessage.swift in Sources */,
 				DF8569A12A6C40D30092CF82 /* HomeRouterProtocol.swift in Sources */,
 				D6F56D532A34CBAB0084EBDA /* SignUpViewController.swift in Sources */,
 				D69D2C1D2A3E3072004E689F /* LoginLocalizable.swift in Sources */,
+				DF604E8C2A6C662200CEA365 /* CoffeeShopsResponse.swift in Sources */,
 				D69D2C292A3E42EC004E689F /* LoginViewProtocol.swift in Sources */,
 				D615BB472A59BB6C00D8238D /* UIHeightResizableTableView.swift in Sources */,
+				DF604E882A6C5D0000CEA365 /* LocationToLocationStringMapper.swift in Sources */,
 				D615BB4E2A59CB9500D8238D /* UIFont+Extensions.swift in Sources */,
 				D6F56D892A34F8ED0084EBDA /* UITextField+Extensions.swift in Sources */,
 				DF8569BC2A6C42FD0092CF82 /* Location.swift in Sources */,
+				DF604E922A6C6AE000CEA365 /* LocationParams.swift in Sources */,
 				DF604E7F2A6C54EE00CEA365 /* CoffeeShop.swift in Sources */,
 				DF8569C42A6C44C20092CF82 /* LocationChooserLocalDataSource.swift in Sources */,
+				DF604E852A6C5C3700CEA365 /* Mapper.swift in Sources */,
 				D69D2C1F2A3E309E004E689F /* LoginLocalizableKeys.swift in Sources */,
 				D69D2C2D2A3E4388004E689F /* LoginPresenter.swift in Sources */,
 				D6F56D4F2A34CBAB0084EBDA /* AppDelegate.swift in Sources */,
@@ -790,12 +841,16 @@
 				DF8569BE2A6C445B0092CF82 /* LocationChooserRepositoryProtocol.swift in Sources */,
 				D615BB542A59E7C000D8238D /* UICoffeeShopCardView.swift in Sources */,
 				D69D2C242A3E3B9C004E689F /* UIViewController+Extensions.swift in Sources */,
+				DF604E962A6C6B8400CEA365 /* HomeActionResult.swift in Sources */,
 				DF8569CC2A6C50480092CF82 /* LocationProvider.swift in Sources */,
+				DF604E8A2A6C5DAC00CEA365 /* LocationMapper+Extensions.swift in Sources */,
 				DF8569CA2A6C503D0092CF82 /* LocationProviderProtocol.swift in Sources */,
 				DF8569AF2A6C417F0092CF82 /* LocationChooserViewController.swift in Sources */,
 				D6F56D512A34CBAB0084EBDA /* SceneDelegate.swift in Sources */,
 				DF8569C22A6C44970092CF82 /* LocationChooserLocalDataSourceProtocol.swift in Sources */,
+				DF604E8E2A6C673F00CEA365 /* CoffeeShopItem.swift in Sources */,
 				D69D2C222A3E3B40004E689F /* HomeViewController.swift in Sources */,
+				DF604E982A6C6C3000CEA365 /* CoffeeAppError.swift in Sources */,
 				DF8569B72A6C42C00092CF82 /* LocationChoosePresenter.swift in Sources */,
 				D615BB582A59F6E600D8238D /* CoffeeShopViewProtocol.swift in Sources */,
 				D6F56D8F2A34FA890084EBDA /* SignUpLocalizable.swift in Sources */,
@@ -804,6 +859,7 @@
 				DF8569B52A6C42590092CF82 /* LocationChooserPresenterProtocol.swift in Sources */,
 				DF604E822A6C565400CEA365 /* HomeModule.swift in Sources */,
 				D615BB562A59F6D400D8238D /* CoffeeShopPresenterProtocol.swift in Sources */,
+				DF604E942A6C6B3800CEA365 /* HomeDataSource.swift in Sources */,
 				DF8569C82A6C4F490092CF82 /* LocationChooserModule.swift in Sources */,
 				D6966E6F2A4773F800374EB3 /* CoffeeShopTableViewCell.swift in Sources */,
 				DF85699A2A6C40410092CF82 /* HomeViewProtocol.swift in Sources */,
