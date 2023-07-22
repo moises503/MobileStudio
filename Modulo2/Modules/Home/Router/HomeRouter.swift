@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class HomeRouter : HomeRouterProtocol {
+    
+    static func launch() -> HomeViewController {
+        let viewController = HomeViewController()
+        viewController.presenter = HomeModule.providesPresenter()
+        return viewController
+    }
+}

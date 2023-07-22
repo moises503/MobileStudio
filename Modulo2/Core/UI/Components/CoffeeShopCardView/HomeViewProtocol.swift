@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol HomeViewProtocol : AnyObject {
+    func showDefaultLocation(with favoriteLocation: Location)
+    func requestLocation()
+    func showCoffeeShops(with coffeeShopsList: [CoffeeShop])
+}

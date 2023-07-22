@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
+protocol HomeRouterProtocol {
+    static func launch() -> HomeViewController
+}

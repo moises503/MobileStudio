@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol HomePresenterProtocol {
+    func attachView(view: HomeViewProtocol)
+    func resolveDefaultLocation()
+}

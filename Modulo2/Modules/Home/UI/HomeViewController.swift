@@ -38,12 +38,20 @@ class HomeViewController: UIViewController {
     private lazy var bottomConstraint = coffeeShopsTableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
     private var coffeeShopViews: [CoffeeShopView] = []
 
+    var presenter: HomePresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Cafeterías cercanas"
         setupViews()
         populateUserInformation()
         setupTableViewDelegates()
+        presenter?.attachView(view: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.resolveDefaultLocation()
     }
     
     private func setupViews() {
@@ -130,4 +138,19 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     
+}
+
+extension HomeViewController: HomeViewProtocol {
+    
+    func showDefaultLocation(with favoriteLocation: Location) {
+        print("DEFAULT: \(favoriteLocation)")
+    }
+    
+    func showCoffeeShops(with coffeeShopsList: [CoffeeShop]) {
+        print("COFFESHOP: \(coffeeShopsList)")
+    }
+    
+    func requestLocation() {
+        print("REQUESTING LOCATION")
+    }
 }
