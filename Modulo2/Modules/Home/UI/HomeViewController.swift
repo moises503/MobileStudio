@@ -53,9 +53,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         title = "Cafeterías cercanas"
         setupViews()
-        populateUserInformation()
         setupTableViewDelegates()
         presenter?.attachView(view: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.obtainNearCoffeeShops(with: LocationParams(latitude: 0.0, longitude: 0.0))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,36 +107,6 @@ class HomeViewController: UIViewController {
         coffeeShopsTableView.dataSource = self
         coffeeShopsTableView.delegate = self
     }
-    
-    private func populateUserInformation() {
-        for index in 1...40 {
-            coffeeShopViews.append(CoffeeShopView(
-                id: "\(index)",
-                name: "Information \(index)",
-                address: "Information about \(index)",
-                image: UIImage(named: "coffeePlaceholder"),
-                isFavorite: isFavorite(with: index),
-                services: getServices(using: index)
-            )
-            )
-        }
-    }
-    
-    private func isFavorite(with index: Int) -> Bool {
-        if index % 2 == 0 {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    private func getServices(using index: Int) -> [CoffeeShopServices] {
-        if index % 2 == 0 {
-            return [.backery, .coffee]
-        } else {
-            return [.backery, .coffee, .petFriendly]
-        }
-    }
 }
 
 
@@ -161,10 +135,15 @@ extension HomeViewController: HomeViewProtocol {
     }
     
     func showCoffeeShops(with coffeeShopsList: [CoffeeShop]) {
-        print("COFFESHOP: \(coffeeShopsList)")
+        coffeeShopViews = coffeeShopsList.toCoffeeShopViewList()
+        coffeeShopsTableView.reloadData()
     }
     
     func requestLocation() {
         print("REQUESTING LOCATION")
+    }
+    
+    func showError(message: String) {
+        debugPrint("ERROR: \(message)")
     }
 }

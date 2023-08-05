@@ -23,7 +23,13 @@ class NetworkManager {
     }()
     
     // MARK: - Request methods
-    func makeRequest<T: Codable>(endpoint: String, method: HTTPMethod, parameters: Parameters? = nil, completion: @escaping (Result<T, Error>) -> Void) {
+    func makeRequest<T: Codable>(
+        endpoint: String,
+        method: HTTPMethod,
+        headers: HTTPHeaders? = nil,
+        parameters: Parameters? = nil,
+        completion: @escaping (Result<T, Error>) -> Void
+    ) {
         
         sessionManager.request(endpoint, method: method, parameters: parameters).validate().responseDecodable { (response: DataResponse<T, AFError>) in
             switch response.result {

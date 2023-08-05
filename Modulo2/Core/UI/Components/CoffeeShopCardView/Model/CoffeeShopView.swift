@@ -12,7 +12,7 @@ struct CoffeeShopView {
     var id: String
     var name: String
     var address: String
-    var image: UIImage?
+    var imageURL: String?
     var isFavorite: Bool
     var services: [CoffeeShopServices]
 }

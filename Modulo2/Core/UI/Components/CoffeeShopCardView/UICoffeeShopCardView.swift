@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Nuke
 
 class UICoffeeShopCardView: UIView {
     
@@ -165,7 +166,13 @@ extension UICoffeeShopCardView: CoffeeShopViewProtocol {
     func displayCoffeeShopView(with coffeeShopView: CoffeeShopView) {
         coffeeShopTitleLabel.text = coffeeShopView.name
         coffeeShopAddressLabel.text = coffeeShopView.address
-        coffeeShopImageView.image = coffeeShopView.image
+        let options = ImageLoadingOptions(
+            placeholder: UIImage(named: "restaurantPlaceholder"),
+            transition: .fadeIn(duration: 0.5),
+            failureImage: UIImage(named: "restaurantPlaceholder"),
+            failureImageTransition: .fadeIn(duration: 0.5)
+        )
+        coffeeShopImageView.loadImage(with: coffeeShopView.imageURL ?? "", and: options)
     }
     
     func markAsFavorite() {

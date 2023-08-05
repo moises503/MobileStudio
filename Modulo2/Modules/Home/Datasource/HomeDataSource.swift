@@ -9,7 +9,13 @@ import Foundation
 
 class HomeDataSource: HomeDataSourceProtocol {
     
-    func obtainNearCoffeeShops(with locationParams: LocationParams) -> HomeActionResult {
-        return .success([])
+    private var endPoint: CoffeeShopsEndPointProtocol
+    
+    init(endPoint: CoffeeShopsEndPointProtocol) {
+        self.endPoint = endPoint
+    }
+    
+    func obtainNearCoffeeShops(with locationParams: LocationParams, onCoffeeShopsResult: @escaping (HomeActionResult) -> Void) {
+        endPoint.obtainCoffeeShops(with: locationParams, onCoffeeShopsResult: onCoffeeShopsResult)
     }
 }

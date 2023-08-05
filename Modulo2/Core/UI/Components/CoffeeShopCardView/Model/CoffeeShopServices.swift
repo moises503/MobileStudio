@@ -12,4 +12,5 @@ enum CoffeeShopServices {
     case wifi
     case backery
     case petFriendly
+    case other
 }

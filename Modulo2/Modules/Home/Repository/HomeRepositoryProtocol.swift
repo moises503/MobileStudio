@@ -1,12 +1,12 @@
 //
-//  HomeDataSourceProtocol.swift
+//  HomeRepositoryProtocol.swift
 //  Modulo2
 //
-//  Created by Moisés Garduño Reyes on 22/07/23.
+//  Created by Moisés Garduño Reyes on 05/08/23.
 //
 
 import Foundation
 
-protocol HomeDataSourceProtocol {
+protocol HomeRepositoryProtocol {
     func obtainNearCoffeeShops(with locationParams: LocationParams, onCoffeeShopsResult: @escaping (HomeActionResult) -> Void)
 }

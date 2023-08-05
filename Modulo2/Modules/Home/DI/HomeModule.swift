@@ -9,7 +9,22 @@ import Foundation
 
 class HomeModule {
     
+    static func providesEndPoint() -> CoffeeShopsEndPointProtocol {
+        return CoffeeShopsEndPoint(networkManager: NetworkManager.shared)
+    }
+    
+    static func providesDataSource() -> HomeDataSourceProtocol {
+        return HomeDataSource(endPoint: providesEndPoint())
+    }
+    
+    static func providesRepository() -> HomeRepositoryProtocol {
+        return HomeRepository(dataSource: providesDataSource())
+    }
+    
     static func providesPresenter() -> HomePresenterProtocol {
-        return HomePresenter(locationProvider: LocationChooserModule.providesLocationProvider())
+        return HomePresenter(
+            locationProvider: LocationChooserModule.providesLocationProvider(),
+            homeRepository: providesRepository()
+        )
     }
 }

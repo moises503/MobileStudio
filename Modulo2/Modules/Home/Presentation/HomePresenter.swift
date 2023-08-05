@@ -11,9 +11,11 @@ class HomePresenter: HomePresenterProtocol {
     
     private weak var view: HomeViewProtocol?
     private var locationProvider: LocationProviderProtocol
+    private var homeRepository: HomeRepositoryProtocol
     
-    init(locationProvider: LocationProviderProtocol) {
+    init(locationProvider: LocationProviderProtocol, homeRepository: HomeRepositoryProtocol) {
         self.locationProvider = locationProvider
+        self.homeRepository = homeRepository
     }
     
     func attachView(view: HomeViewProtocol) {
@@ -25,6 +27,17 @@ class HomePresenter: HomePresenterProtocol {
             view?.showDefaultLocation(with: favoriteLocation)
         } else {
             view?.requestLocation()
+        }
+    }
+    
+    func obtainNearCoffeeShops(with locationParams: LocationParams) {
+        homeRepository.obtainNearCoffeeShops(with: locationParams) { [weak self] homeActionResult in
+            switch homeActionResult {
+            case .success(let coffeeShops):
+                self?.view?.showCoffeeShops(with: coffeeShops)
+            case .error(let error):
+                self?.view?.showError(message: error.localizedDescription)
+            }
         }
     }
 }

@@ -43,6 +43,8 @@ class CoffeeShopPresenter : CoffeeShopPresenterProtocol {
                 view?.bakeryAvailable()
             case .wifi:
                 view?.wifiAvailbale()
+            default:
+                break
             }
         }
     }

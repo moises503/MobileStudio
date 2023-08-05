@@ -8,12 +8,12 @@
 import Foundation
 
 struct CoffeeShopsReponse : Codable {
-    var coffeeShops: [CoffeeShopItem]
-    var errorMessage: String?
+    var shops: [CoffeeShopItem]
+    var error: String?
     
     enum Keys: String, CodingKey {
-        case coffeeShops = "shops"
-        case errorMessage = "error"
+        case shops
+        case error
     }
     
     /*

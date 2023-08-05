@@ -10,4 +10,5 @@ import Foundation
 protocol HomePresenterProtocol {
     func attachView(view: HomeViewProtocol)
     func resolveDefaultLocation()
+    func obtainNearCoffeeShops(with locationParams: LocationParams)
 }

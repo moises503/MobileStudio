@@ -18,11 +18,11 @@ struct CoffeeShopItem : Codable {
     var services: [String]
     
     enum Keys: String, CodingKey {
-        case id = "_id"
+        case id
         case name
         case address
         case imageURL
-        case isFavorite = "is_favorite"
+        case isFavorite
         case latitude
         case longitude
         case services
