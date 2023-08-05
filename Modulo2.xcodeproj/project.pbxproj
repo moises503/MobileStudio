@@ -64,6 +64,14 @@
 		DF604EAF2A7EC17E00CEA365 /* StringToCoffeeShopServiceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EAE2A7EC17E00CEA365 /* StringToCoffeeShopServiceMapper.swift */; };
 		DF604EB12A7EC24600CEA365 /* CoffeeShop+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EB02A7EC24600CEA365 /* CoffeeShop+Extensions.swift */; };
 		DF604EB32A7ED37D00CEA365 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EB22A7ED37D00CEA365 /* UIImageView+Extensions.swift */; };
+		DF604EB72A7ED8C100CEA365 /* LocationDb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF604EB52A7ED8C100CEA365 /* LocationDb.xcdatamodeld */; };
+		DF604EB92A7EDA5E00CEA365 /* LocationDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EB82A7EDA5E00CEA365 /* LocationDatabase.swift */; };
+		DF604EBC2A7EDB4900CEA365 /* LocationDaoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EBB2A7EDB4900CEA365 /* LocationDaoProtocol.swift */; };
+		DF604EBE2A7EDBD900CEA365 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EBD2A7EDBD900CEA365 /* LocationEntity.swift */; };
+		DF604EC12A7EDCF800CEA365 /* LocationSingleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EC02A7EDCF800CEA365 /* LocationSingleResult.swift */; };
+		DF604EC32A7EDD5000CEA365 /* LocationComposedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EC22A7EDD5000CEA365 /* LocationComposedResult.swift */; };
+		DF604EC52A7EDE7400CEA365 /* LocationDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EC42A7EDE7400CEA365 /* LocationDao.swift */; };
+		DF604EC82A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EC72A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift */; };
 		DF8569912A6C32890092CF82 /* CoffeeShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */; };
 		DF8569982A6C40370092CF82 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */; };
 		DF85699A2A6C40410092CF82 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */; };
@@ -169,6 +177,14 @@
 		DF604EAE2A7EC17E00CEA365 /* StringToCoffeeShopServiceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToCoffeeShopServiceMapper.swift; sourceTree = "<group>"; };
 		DF604EB02A7EC24600CEA365 /* CoffeeShop+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoffeeShop+Extensions.swift"; sourceTree = "<group>"; };
 		DF604EB22A7ED37D00CEA365 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		DF604EB62A7ED8C100CEA365 /* LocationDb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationDb.xcdatamodel; sourceTree = "<group>"; };
+		DF604EB82A7EDA5E00CEA365 /* LocationDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDatabase.swift; sourceTree = "<group>"; };
+		DF604EBB2A7EDB4900CEA365 /* LocationDaoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDaoProtocol.swift; sourceTree = "<group>"; };
+		DF604EBD2A7EDBD900CEA365 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		DF604EC02A7EDCF800CEA365 /* LocationSingleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSingleResult.swift; sourceTree = "<group>"; };
+		DF604EC22A7EDD5000CEA365 /* LocationComposedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationComposedResult.swift; sourceTree = "<group>"; };
+		DF604EC42A7EDE7400CEA365 /* LocationDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDao.swift; sourceTree = "<group>"; };
+		DF604EC72A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntityToLocationLocalMapper.swift; sourceTree = "<group>"; };
 		DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopPresenter.swift; sourceTree = "<group>"; };
 		DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenterProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomePresenterProtocol.swift; sourceTree = SOURCE_ROOT; };
 		DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomeViewProtocol.swift; sourceTree = SOURCE_ROOT; };
@@ -548,6 +564,44 @@
 			path = Mapper;
 			sourceTree = "<group>";
 		};
+		DF604EB42A7ED8AF00CEA365 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DF604EB52A7ED8C100CEA365 /* LocationDb.xcdatamodeld */,
+				DF604EB82A7EDA5E00CEA365 /* LocationDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DF604EBA2A7EDB3400CEA365 /* LocationDao */ = {
+			isa = PBXGroup;
+			children = (
+				DF604EC62A7EDF4100CEA365 /* Mapper */,
+				DF604EBF2A7EDCE400CEA365 /* Model */,
+				DF604EBB2A7EDB4900CEA365 /* LocationDaoProtocol.swift */,
+				DF604EC42A7EDE7400CEA365 /* LocationDao.swift */,
+			);
+			path = LocationDao;
+			sourceTree = "<group>";
+		};
+		DF604EBF2A7EDCE400CEA365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF604EBD2A7EDBD900CEA365 /* LocationEntity.swift */,
+				DF604EC02A7EDCF800CEA365 /* LocationSingleResult.swift */,
+				DF604EC22A7EDD5000CEA365 /* LocationComposedResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF604EC62A7EDF4100CEA365 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DF604EC72A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		DF8569922A6C40060092CF82 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,8 +663,10 @@
 		DF8569A52A6C40EF0092CF82 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				DF604EB42A7ED8AF00CEA365 /* Database */,
 				DF8569C62A6C4EFF0092CF82 /* DI */,
 				DF8569C52A6C497D0092CF82 /* Provider */,
+				DF604EBA2A7EDB3400CEA365 /* LocationDao */,
 				DF8569A62A6C40F50092CF82 /* DataSource */,
 				DF8569A72A6C40FF0092CF82 /* Repository */,
 				DF8569A82A6C41060092CF82 /* Presentation */,
@@ -871,8 +927,10 @@
 				D69D2C2B2A3E4303004E689F /* LoginPresenterProtocol.swift in Sources */,
 				DF8569B92A6C42D80092CF82 /* LocationChooserViewProtocol.swift in Sources */,
 				DF85699E2A6C405A0092CF82 /* HomePresenter.swift in Sources */,
+				DF604EC12A7EDCF800CEA365 /* LocationSingleResult.swift in Sources */,
 				DF8569C02A6C44640092CF82 /* LocationChooserRepository.swift in Sources */,
 				DF604EAF2A7EC17E00CEA365 /* StringToCoffeeShopServiceMapper.swift in Sources */,
+				DF604EB92A7EDA5E00CEA365 /* LocationDatabase.swift in Sources */,
 				DF604EA72A7EB45400CEA365 /* CoffeeShopItem+Extensions.swift in Sources */,
 				D6F56D872A34F8D10084EBDA /* String+Extensions.swift in Sources */,
 				D615BB502A59E5C700D8238D /* CoffeeShopServices.swift in Sources */,
@@ -896,17 +954,20 @@
 				D6F56D892A34F8ED0084EBDA /* UITextField+Extensions.swift in Sources */,
 				DF8569BC2A6C42FD0092CF82 /* Location.swift in Sources */,
 				DF604E922A6C6AE000CEA365 /* LocationParams.swift in Sources */,
+				DF604EC52A7EDE7400CEA365 /* LocationDao.swift in Sources */,
 				DF604E9D2A7EA77B00CEA365 /* NetworkConfig.swift in Sources */,
 				DF604E7F2A6C54EE00CEA365 /* CoffeeShop.swift in Sources */,
 				DF8569C42A6C44C20092CF82 /* LocationChooserLocalDataSource.swift in Sources */,
 				DF604E852A6C5C3700CEA365 /* Mapper.swift in Sources */,
 				D69D2C1F2A3E309E004E689F /* LoginLocalizableKeys.swift in Sources */,
 				D69D2C2D2A3E4388004E689F /* LoginPresenter.swift in Sources */,
+				DF604EBE2A7EDBD900CEA365 /* LocationEntity.swift in Sources */,
 				D6F56D4F2A34CBAB0084EBDA /* AppDelegate.swift in Sources */,
 				DF8569A32A6C40DB0092CF82 /* HomeRouter.swift in Sources */,
 				DF604E9F2A7EA8FA00CEA365 /* CoffeeShopsEndPoint.swift in Sources */,
 				DF8569BE2A6C445B0092CF82 /* LocationChooserRepositoryProtocol.swift in Sources */,
 				DF604EA52A7EB39100CEA365 /* CoffeeShopItemToCoffeeShopMapper.swift in Sources */,
+				DF604EBC2A7EDB4900CEA365 /* LocationDaoProtocol.swift in Sources */,
 				D615BB542A59E7C000D8238D /* UICoffeeShopCardView.swift in Sources */,
 				D69D2C242A3E3B9C004E689F /* UIViewController+Extensions.swift in Sources */,
 				DF604E962A6C6B8400CEA365 /* HomeActionResult.swift in Sources */,
@@ -920,6 +981,7 @@
 				DF604E8E2A6C673F00CEA365 /* CoffeeShopItem.swift in Sources */,
 				D69D2C222A3E3B40004E689F /* HomeViewController.swift in Sources */,
 				DF604E982A6C6C3000CEA365 /* CoffeeAppError.swift in Sources */,
+				DF604EB72A7ED8C100CEA365 /* LocationDb.xcdatamodeld in Sources */,
 				DF604EA22A7EAE6D00CEA365 /* CoffeeShopsEndPointProtocol.swift in Sources */,
 				DF8569B72A6C42C00092CF82 /* LocationChoosePresenter.swift in Sources */,
 				D615BB582A59F6E600D8238D /* CoffeeShopViewProtocol.swift in Sources */,
@@ -930,10 +992,12 @@
 				DF8569B12A6C41990092CF82 /* LocationChooserRouterProtocol.swift in Sources */,
 				DF8569B52A6C42590092CF82 /* LocationChooserPresenterProtocol.swift in Sources */,
 				DF604E822A6C565400CEA365 /* HomeModule.swift in Sources */,
+				DF604EC82A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift in Sources */,
 				D615BB562A59F6D400D8238D /* CoffeeShopPresenterProtocol.swift in Sources */,
 				DF604E942A6C6B3800CEA365 /* HomeDataSource.swift in Sources */,
 				DF8569C82A6C4F490092CF82 /* LocationChooserModule.swift in Sources */,
 				D6966E6F2A4773F800374EB3 /* CoffeeShopTableViewCell.swift in Sources */,
+				DF604EC32A7EDD5000CEA365 /* LocationComposedResult.swift in Sources */,
 				DF85699A2A6C40410092CF82 /* HomeViewProtocol.swift in Sources */,
 				DF8569912A6C32890092CF82 /* CoffeeShopPresenter.swift in Sources */,
 			);
@@ -1266,6 +1330,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF604EB52A7ED8C100CEA365 /* LocationDb.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF604EB62A7ED8C100CEA365 /* LocationDb.xcdatamodel */,
+			);
+			currentVersion = DF604EB62A7ED8C100CEA365 /* LocationDb.xcdatamodel */;
+			path = LocationDb.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D6F56D432A34CBAB0084EBDA /* Project object */;
 }
