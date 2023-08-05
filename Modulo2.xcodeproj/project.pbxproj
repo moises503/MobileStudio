@@ -52,6 +52,7 @@
 		DF604E942A6C6B3800CEA365 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E932A6C6B3800CEA365 /* HomeDataSource.swift */; };
 		DF604E962A6C6B8400CEA365 /* HomeActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E952A6C6B8400CEA365 /* HomeActionResult.swift */; };
 		DF604E982A6C6C3000CEA365 /* CoffeeAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E972A6C6C3000CEA365 /* CoffeeAppError.swift */; };
+		DF604E9B2A7EA0C600CEA365 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E9A2A7EA0C600CEA365 /* NetworkManager.swift */; };
 		DF8569912A6C32890092CF82 /* CoffeeShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */; };
 		DF8569982A6C40370092CF82 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */; };
 		DF85699A2A6C40410092CF82 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */; };
@@ -145,6 +146,7 @@
 		DF604E932A6C6B3800CEA365 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		DF604E952A6C6B8400CEA365 /* HomeActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionResult.swift; sourceTree = "<group>"; };
 		DF604E972A6C6C3000CEA365 /* CoffeeAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeAppError.swift; sourceTree = "<group>"; };
+		DF604E9A2A7EA0C600CEA365 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopPresenter.swift; sourceTree = "<group>"; };
 		DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenterProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomePresenterProtocol.swift; sourceTree = SOURCE_ROOT; };
 		DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomeViewProtocol.swift; sourceTree = SOURCE_ROOT; };
@@ -408,6 +410,7 @@
 		D6F56D852A34F8BF0084EBDA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DF604E992A7EA0BA00CEA365 /* Network */,
 				DF604E832A6C5C2C00CEA365 /* Arch */,
 				D615BB442A59BB5200D8238D /* UI */,
 				D69D2C252A3E3BB5004E689F /* Models */,
@@ -490,6 +493,14 @@
 				DF604E892A6C5DAC00CEA365 /* LocationMapper+Extensions.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		DF604E992A7EA0BA00CEA365 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DF604E9A2A7EA0C600CEA365 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		DF8569922A6C40060092CF82 /* Repository */ = {
@@ -814,6 +825,7 @@
 				DF8569C02A6C44640092CF82 /* LocationChooserRepository.swift in Sources */,
 				D6F56D872A34F8D10084EBDA /* String+Extensions.swift in Sources */,
 				D615BB502A59E5C700D8238D /* CoffeeShopServices.swift in Sources */,
+				DF604E9B2A7EA0C600CEA365 /* NetworkManager.swift in Sources */,
 				D6F56D912A34FAE10084EBDA /* SignUpLocalizableKeys.swift in Sources */,
 				D69D2C182A3E0616004E689F /* SignUpFromScratchViewController.swift in Sources */,
 				D6CB573F2A477DC0000768C2 /* CoffeeShopView.swift in Sources */,

@@ -1,0 +1,52 @@
+{
+	"shops": [
+		{
+			"_id": "379837495",
+                 	"name": "Pico café",
+                	"address": "Artz 1509",
+                 	"imageURL": "https://image.io/image.png",
+                 	"is_favorite": false,
+                 	"latitude": 13243.4843934,
+                 	"longitude": 12.898494,
+                 	"services": [
+                     		"petFriendly", "wifi", "bakery"
+                	 ]
+		},
+	        {
+			"_id": "3798374954",
+                 	"name": "Perro café",
+                 	"address": "Artz 1509 pedregal",
+                 	"imageURL": "https://image.io/image.png",
+                 	"is_favorite": false,
+                 	"latitude": 13243.4843934,
+                 	"longitude": 12.898494,
+                 	"services": [
+                     		"petFriendly", "wifi"
+                	 ]
+		},
+		{
+			"_id": "3798374955",
+                 	"name": "La abuelita cafe",
+                 	"address": "Candelaria 1590",
+                 	"imageURL": "https://image.io/image.png",
+                 	"is_favorite": true,
+                 	"latitude": 13243.4843934,
+                 	"longitude": 12.898494,
+                 	"services": [
+                     		"wifi"
+                	 ]
+		},
+		{
+			"_id": "3798374956",
+                 	"name": "Pico café",
+                 	"address": "Colonia las hadas 15090",
+                 	"imageURL": "https://image.io/image.png",
+                 	"is_favorite": false,
+                 	"latitude": 13243.4843934,
+                 	"longitude": 12.898494,
+                 	"services": [
+                     		"petFriendly", "wifi", "bakery", "coffee"
+                	 ]
+		}
+	]
+}
