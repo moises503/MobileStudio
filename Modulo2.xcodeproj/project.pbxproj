@@ -72,6 +72,8 @@
 		DF604EC32A7EDD5000CEA365 /* LocationComposedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EC22A7EDD5000CEA365 /* LocationComposedResult.swift */; };
 		DF604EC52A7EDE7400CEA365 /* LocationDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EC42A7EDE7400CEA365 /* LocationDao.swift */; };
 		DF604EC82A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EC72A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift */; };
+		DF604EFB2A9A647F00CEA365 /* LocationEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EFA2A9A647F00CEA365 /* LocationEntity+Extension.swift */; };
+		DF604EFD2A9A687000CEA365 /* LocationLocalToLocationEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604EFC2A9A687000CEA365 /* LocationLocalToLocationEntityMapper.swift */; };
 		DF8569912A6C32890092CF82 /* CoffeeShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */; };
 		DF8569982A6C40370092CF82 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */; };
 		DF85699A2A6C40410092CF82 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */; };
@@ -185,6 +187,8 @@
 		DF604EC22A7EDD5000CEA365 /* LocationComposedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationComposedResult.swift; sourceTree = "<group>"; };
 		DF604EC42A7EDE7400CEA365 /* LocationDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDao.swift; sourceTree = "<group>"; };
 		DF604EC72A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntityToLocationLocalMapper.swift; sourceTree = "<group>"; };
+		DF604EFA2A9A647F00CEA365 /* LocationEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationEntity+Extension.swift"; sourceTree = "<group>"; };
+		DF604EFC2A9A687000CEA365 /* LocationLocalToLocationEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLocalToLocationEntityMapper.swift; sourceTree = "<group>"; };
 		DF8569902A6C32890092CF82 /* CoffeeShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopPresenter.swift; sourceTree = "<group>"; };
 		DF8569972A6C40370092CF82 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenterProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomePresenterProtocol.swift; sourceTree = SOURCE_ROOT; };
 		DF8569992A6C40410092CF82 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewProtocol.swift; path = Modulo2/Core/UI/Components/CoffeeShopCardView/HomeViewProtocol.swift; sourceTree = SOURCE_ROOT; };
@@ -598,6 +602,8 @@
 			isa = PBXGroup;
 			children = (
 				DF604EC72A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift */,
+				DF604EFA2A9A647F00CEA365 /* LocationEntity+Extension.swift */,
+				DF604EFC2A9A687000CEA365 /* LocationLocalToLocationEntityMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -940,6 +946,7 @@
 				D69D2C182A3E0616004E689F /* SignUpFromScratchViewController.swift in Sources */,
 				D6CB573F2A477DC0000768C2 /* CoffeeShopView.swift in Sources */,
 				DF604E902A6C6AA900CEA365 /* HomeDataSourceProtocol.swift in Sources */,
+				DF604EFB2A9A647F00CEA365 /* LocationEntity+Extension.swift in Sources */,
 				D6F56D7F2A34F4DA0084EBDA /* LocalizableProtocol.swift in Sources */,
 				D69D2C272A3E3BC5004E689F /* AlertMessage.swift in Sources */,
 				DF8569A12A6C40D30092CF82 /* HomeRouterProtocol.swift in Sources */,
@@ -991,6 +998,7 @@
 				DF604EB12A7EC24600CEA365 /* CoffeeShop+Extensions.swift in Sources */,
 				DF8569B12A6C41990092CF82 /* LocationChooserRouterProtocol.swift in Sources */,
 				DF8569B52A6C42590092CF82 /* LocationChooserPresenterProtocol.swift in Sources */,
+				DF604EFD2A9A687000CEA365 /* LocationLocalToLocationEntityMapper.swift in Sources */,
 				DF604E822A6C565400CEA365 /* HomeModule.swift in Sources */,
 				DF604EC82A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift in Sources */,
 				D615BB562A59F6D400D8238D /* CoffeeShopPresenterProtocol.swift in Sources */,

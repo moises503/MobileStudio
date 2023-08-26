@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import CoreData
 
 protocol LocationDaoProtocol {
     func insert(using locationEntity: LocationEntity, withResult: @escaping (LocationSingleResult) -> Void)
     func update(using locationEntity: LocationEntity, withResult: @escaping (LocationSingleResult) -> Void)
     func delete(using locationEntity: LocationEntity, withResult: @escaping (LocationSingleResult) -> Void)
-    func list(filtering with: String?, withResult: @escaping (LocationComposedResult) -> Void)
+    func list(filtering withPredicate: NSPredicate?,
+              andSorting byProperties: [NSSortDescriptor]?,
+              withResult: @escaping (LocationComposedResult) -> Void)
 }
