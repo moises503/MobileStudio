@@ -21,12 +21,17 @@ class LocationChooserPresenter: LocationChooserPresenterProtocol {
     }
     
     func obtainLocationsSaved() {
-        let locations = repository.obtainLocationsSaved()
-        
-        if locations.isEmpty {
-            view?.showEmptyLocations()
-        } else {
-            view?.showLocationsSaved(with: locations)
+        repository.obtainLocationsSaved { [weak self] onLocationObtainedResult in
+            switch(onLocationObtainedResult) {
+            case .success(let locations):
+                if locations.isEmpty {
+                    self?.view?.showEmptyLocations()
+                } else {
+                    self?.view?.showLocationsSaved(with: locations)
+                }
+            case .error(let error):
+                self?.view?.showError(with: error.localizedDescription)
+            }
         }
     }
 }

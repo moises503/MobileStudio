@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LocationChooserLocalDataSourceProtocol {
-    func obtainLocationsSaved() -> [Location]
+    func obtainLocationsSaved(onLocationObtained: @escaping (LocationObtainedResult) -> Void)
 }

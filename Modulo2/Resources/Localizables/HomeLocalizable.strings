@@ -1,0 +1,10 @@
+/* 
+  HomeLocalizable.strings
+  Modulo2
+
+  Created by Moisés Garduño Reyes on 02/09/23.
+  
+*/
+
+"home_screen_title" = "Cafeterías cercanas";
+"home_find_location_title" = "Obtener mi ubicación actual";

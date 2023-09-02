@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .black
+        label.text = HomeLocalizable.homeFindLocationTitle
         label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -51,7 +52,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Cafeterías cercanas"
+        title = HomeLocalizable.homeSreenTitle
         setupViews()
         setupTableViewDelegates()
         presenter?.attachView(view: self)
@@ -140,7 +141,7 @@ extension HomeViewController: HomeViewProtocol {
     }
     
     func requestLocation() {
-        print("REQUESTING LOCATION")
+        debugPrint("REQUESTING LOCATION")
     }
     
     func showError(message: String) {

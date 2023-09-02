@@ -9,8 +9,12 @@ import Foundation
 
 class LocationChooserModule {
     
+    static func providesLocationDao() -> LocationDaoProtocol {
+        return LocationDao()
+    }
+    
     static func providesDataSource() -> LocationChooserLocalDataSourceProtocol {
-        return LocationChooserLocalDataSource()
+        return LocationChooserLocalDataSource(locationDao: providesLocationDao())
     }
     
     static func providesRepository() -> LocationChooserRepositoryProtocol {

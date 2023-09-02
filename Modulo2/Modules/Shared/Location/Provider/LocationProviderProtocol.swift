@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LocationProviderProtocol {
-    func getFavoriteLocation() -> Location? 
+    func getFavoriteLocation(withResult: @escaping (LocationProviderResult) -> Void)
 }

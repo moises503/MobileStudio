@@ -15,11 +15,14 @@ class LocationProvider: LocationProviderProtocol {
         self.repository = repository
     }
     
-    func getFavoriteLocation() -> Location? {
-        let locations = repository.obtainLocationsSaved()
-        
-        return locations.first { location in
-            location.isFavorite == true
+    func getFavoriteLocation(withResult: @escaping (LocationProviderResult) -> Void) {
+        repository.obtainLocationsSaved { onLocationObtainedResult in
+            switch(onLocationObtainedResult) {
+            case .success(let locations):
+                withResult(.success(locations.first))
+            case .error(let error):
+                withResult(.error(error))
+            }
         }
     }
 }

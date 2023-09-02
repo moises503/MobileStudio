@@ -23,10 +23,17 @@ class HomePresenter: HomePresenterProtocol {
     }
     
     func resolveDefaultLocation() {
-        if let favoriteLocation = locationProvider.getFavoriteLocation() {
-            view?.showDefaultLocation(with: favoriteLocation)
-        } else {
-            view?.requestLocation()
+        locationProvider.getFavoriteLocation { [weak self] locationProviderResult in
+            switch(locationProviderResult) {
+            case .success(let favoriteLocation):
+                if let favoriteLocation = favoriteLocation {
+                    self?.view?.showDefaultLocation(with: favoriteLocation)
+                } else {
+                    self?.view?.requestLocation()
+                }
+            case .error(_):
+                self?.view?.requestLocation()
+            }
         }
     }
     
