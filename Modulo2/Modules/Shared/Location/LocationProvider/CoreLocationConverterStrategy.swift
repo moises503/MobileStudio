@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreLocation
-import GoogleMaps
 import GooglePlaces
 
 class CoreLocationConverterStrategy: LocationConverterStrategyProtocol {

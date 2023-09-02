@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Necesitamos obtener tu ubicación para mostrar las cafeterías cercanas a tu ubicación</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Necesitamos obtener tu ubicación para mostrar las cafeterías cercanas a tu ubicación</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Necesitamos obtener tu ubicación para mostrar las cafeterías cercanas a tu ubicación</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

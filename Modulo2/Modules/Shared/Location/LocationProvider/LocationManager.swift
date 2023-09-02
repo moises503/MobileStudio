@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import GoogleMaps
 import GooglePlaces
 import CoreLocation
 

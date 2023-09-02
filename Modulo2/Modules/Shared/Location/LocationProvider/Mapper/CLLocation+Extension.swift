@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreLocation
-import GoogleMaps
 import GooglePlaces
 
 extension CLPlacemark {
@@ -17,10 +16,10 @@ extension CLPlacemark {
     }
 }
 
-extension GMSAddress {
+extension GMSPlace {
     
     func toLocation() -> Location {
-        return GMSAddressToLocationMapper().transform(value: self)
+        return GMSPlaceToLocationMapper().transform(value: self)
     }
 }
 
