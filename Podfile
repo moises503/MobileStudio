@@ -7,6 +7,8 @@ install! 'cocoapods', :disable_input_output_paths => true
 def common_pods
     pod 'Alamofire', '~> 5.5.0'
     pod 'Nuke', '~> 10.0'
+    pod 'GooglePlacesSearchController'
+    pod 'GooglePlacePicker'
 end
 
 target 'Modulo2' do

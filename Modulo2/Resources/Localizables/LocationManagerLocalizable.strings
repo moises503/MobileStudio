@@ -1,0 +1,13 @@
+/* 
+  LocationLocalizable.strings
+  Modulo2
+
+  Created by Moisés Garduño Reyes on 02/09/23.
+  
+*/
+
+"location_manager_authorize_when_in_use" = "Vamos a requerir que nos proporciones el permiso de ubicación para obtener las cafeterías cercanas a ti";
+"location_manager_denied" = "Actualmente has denegado el permiso de ubicación, si deseas puedes activarlo mediante la configuración de la app";
+"location_manager_not_determined" = "El permiso de ubicación no fue determinado, si deseas puedes activarlo mediante la configuración de la app";
+"location_manager_restricted" = "Actualmente el permiso de ubicación no esta disponible, por favor revisa la canfiguración de tu dispositivo";
+"location_manager_authorized_always" = "Gracias por permitirnos acceder a tu ubicación, en un momento mostraremos las cafeterías cercanas a ti";

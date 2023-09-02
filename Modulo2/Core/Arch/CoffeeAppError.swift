@@ -11,4 +11,5 @@ enum CoffeeAppError: Error {
     case requestError(String)
     case networkError(String)
     case databaseError(String)
+    case permissionError(String)
 }
