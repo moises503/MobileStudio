@@ -12,4 +12,8 @@ protocol HomeViewProtocol : AnyObject {
     func requestLocation()
     func showCoffeeShops(with coffeeShopsList: [CoffeeShop])
     func showError(message: String)
+    
+    /// To request location permission
+    func permissionDenied()
+    func proceedToRequestLocation()
 }

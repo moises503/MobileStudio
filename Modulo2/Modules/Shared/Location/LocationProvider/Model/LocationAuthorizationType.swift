@@ -11,4 +11,5 @@ enum LocationAuthorizationType {
     case request
     case authorizedAlways
     case denied
+    case notDetermined
 }

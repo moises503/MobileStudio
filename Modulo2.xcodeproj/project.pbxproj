@@ -115,6 +115,7 @@
 		DFCCEE232AA3BED00074E5B2 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE222AA3BED00074E5B2 /* Coordinate.swift */; };
 		DFCCEE252AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE242AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift */; };
 		DFCCEE272AA3CE660074E5B2 /* GMSPlace+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE262AA3CE660074E5B2 /* GMSPlace+Extensions.swift */; };
+		DFCCEE742AAFF44C0074E5B2 /* LocationManagerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */; };
 		EEED9D653892D56C5A0CF7B4 /* Pods_Modulo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB3C5CF667D9259B92C3B58 /* Pods_Modulo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -251,6 +252,7 @@
 		DFCCEE222AA3BED00074E5B2 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		DFCCEE242AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationToCoordinateMapper.swift; sourceTree = "<group>"; };
 		DFCCEE262AA3CE660074E5B2 /* GMSPlace+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSPlace+Extensions.swift"; sourceTree = "<group>"; };
+		DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -822,6 +824,7 @@
 		DFCCEE042AA39B760074E5B2 /* LocationProvider */ = {
 			isa = PBXGroup;
 			children = (
+				DFCCEE722AAFF43D0074E5B2 /* DI */,
 				DFCCEE1F2AA3BD4A0074E5B2 /* Localizable */,
 				DFCCEE072AA3A5B90074E5B2 /* Mapper */,
 				DFCCEE162AA3B9540074E5B2 /* Model */,
@@ -862,6 +865,14 @@
 				DFCCEE202AA3BD590074E5B2 /* LocationManagerLocalizable.swift */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		DFCCEE722AAFF43D0074E5B2 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1058,6 +1069,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6F56D942A350C740084EBDA /* LoginViewController.swift in Sources */,
+				DFCCEE742AAFF44C0074E5B2 /* LocationManagerModule.swift in Sources */,
 				DF8569982A6C40370092CF82 /* HomePresenterProtocol.swift in Sources */,
 				D69D2C2B2A3E4303004E689F /* LoginPresenterProtocol.swift in Sources */,
 				DF8569B92A6C42D80092CF82 /* LocationChooserViewProtocol.swift in Sources */,

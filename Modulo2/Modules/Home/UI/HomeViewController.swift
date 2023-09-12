@@ -32,6 +32,9 @@ class HomeViewController: UIViewController {
         label.text = HomeLocalizable.homeFindLocationTitle
         label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onRequestLocation))
+        label.addGestureRecognizer(tap)
         return label
     }()
     
@@ -49,6 +52,8 @@ class HomeViewController: UIViewController {
     private var coffeeShopViews: [CoffeeShopView] = []
 
     var presenter: HomePresenterProtocol?
+    var locationManager: LocationManagerProtocol?
+    var locationConverter: LocationConverterStrategyProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +113,12 @@ class HomeViewController: UIViewController {
         coffeeShopsTableView.dataSource = self
         coffeeShopsTableView.delegate = self
     }
+    
+    @objc private func onRequestLocation() {
+        locationManager?.verifyLocationPermission(onPermissionResult: { [weak self] locationResultPermission in
+            self?.presenter?.resolveLocationPermission(with: locationResultPermission)
+        })
+    }
 }
 
 
@@ -146,5 +157,17 @@ extension HomeViewController: HomeViewProtocol {
     
     func showError(message: String) {
         debugPrint("ERROR: \(message)")
+    }
+    
+    func permissionDenied() {
+        debugPrint("Permission denied")
+    }
+    
+    func proceedToRequestLocation() {
+        locationManager?.recoverLocation(onLocationObtained: { [weak self] coordinate in
+            self?.locationConverter?.resolveLocation(with: coordinate, completion: { location in
+                self?.addressLabel.text = location?.address
+            })
+        })
     }
 }

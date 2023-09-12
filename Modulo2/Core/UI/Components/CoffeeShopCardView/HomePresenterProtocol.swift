@@ -11,4 +11,5 @@ protocol HomePresenterProtocol {
     func attachView(view: HomeViewProtocol)
     func resolveDefaultLocation()
     func obtainNearCoffeeShops(with locationParams: LocationParams)
+    func resolveLocationPermission(with locationResult: LocationPermissionResult)
 }

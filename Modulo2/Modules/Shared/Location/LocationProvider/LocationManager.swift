@@ -35,7 +35,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate, LocationManagerProto
         case .denied:
             onPermissionResult(.success(LocationStatus(messageDescription: LocationManagerLocalizable.locationManagerDenied, status: .denied)))
         case .notDetermined:
-            onPermissionResult(.success(LocationStatus(messageDescription: LocationManagerLocalizable.locationManagerNotDetermined, status: .denied)))
+            onPermissionResult(.success(LocationStatus(messageDescription: LocationManagerLocalizable.locationManagerNotDetermined, status: .notDetermined)))
         case .restricted:
             onPermissionResult(.success(LocationStatus(messageDescription: LocationManagerLocalizable.locationManagerRestricted, status: .denied)))
         case .authorizedAlways:
