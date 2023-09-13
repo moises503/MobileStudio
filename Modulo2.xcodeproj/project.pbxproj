@@ -116,6 +116,7 @@
 		DFCCEE252AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE242AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift */; };
 		DFCCEE272AA3CE660074E5B2 /* GMSPlace+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE262AA3CE660074E5B2 /* GMSPlace+Extensions.swift */; };
 		DFCCEE742AAFF44C0074E5B2 /* LocationManagerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */; };
+		DFCCEE862AB145A30074E5B2 /* LocationItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE852AB145A30074E5B2 /* LocationItemTableViewCell.swift */; };
 		EEED9D653892D56C5A0CF7B4 /* Pods_Modulo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB3C5CF667D9259B92C3B58 /* Pods_Modulo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -253,6 +254,7 @@
 		DFCCEE242AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationToCoordinateMapper.swift; sourceTree = "<group>"; };
 		DFCCEE262AA3CE660074E5B2 /* GMSPlace+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSPlace+Extensions.swift"; sourceTree = "<group>"; };
 		DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerModule.swift; sourceTree = "<group>"; };
+		DFCCEE852AB145A30074E5B2 /* LocationItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -772,6 +774,7 @@
 		DF8569A92A6C41100092CF82 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DFCCEE842AB1457E0074E5B2 /* View */,
 				DF8569AE2A6C417F0092CF82 /* LocationChooserViewController.swift */,
 			);
 			path = UI;
@@ -873,6 +876,14 @@
 				DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		DFCCEE842AB1457E0074E5B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFCCEE852AB145A30074E5B2 /* LocationItemTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1095,6 +1106,7 @@
 				DF604EFB2A9A647F00CEA365 /* LocationEntity+Extension.swift in Sources */,
 				D6F56D7F2A34F4DA0084EBDA /* LocalizableProtocol.swift in Sources */,
 				D69D2C272A3E3BC5004E689F /* AlertMessage.swift in Sources */,
+				DFCCEE862AB145A30074E5B2 /* LocationItemTableViewCell.swift in Sources */,
 				DF8569A12A6C40D30092CF82 /* HomeRouterProtocol.swift in Sources */,
 				DF604EA92A7EB68E00CEA365 /* HomeRepositoryProtocol.swift in Sources */,
 				D6F56D532A34CBAB0084EBDA /* SignUpViewController.swift in Sources */,

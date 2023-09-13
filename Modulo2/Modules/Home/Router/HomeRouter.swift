@@ -12,8 +12,6 @@ class HomeRouter : HomeRouterProtocol {
     static func launch() -> HomeViewController {
         let viewController = HomeViewController()
         viewController.presenter = HomeModule.providesPresenter()
-        viewController.locationManager = LocationManagerModule.providesLocationManager()
-        viewController.locationConverter = LocationManagerModule.providesCoreLocationConverterStrategy()
         return viewController
     }
 }

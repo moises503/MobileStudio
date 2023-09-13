@@ -47,22 +47,4 @@ class HomePresenter: HomePresenterProtocol {
             }
         }
     }
-    
-    func resolveLocationPermission(with locationResult: LocationPermissionResult) {
-        switch locationResult {
-        case .success(let locationStatus):
-            switch locationStatus.status {
-            case .authorizedAlways:
-                view?.proceedToRequestLocation()
-            case .denied:
-                view?.permissionDenied()
-            case .request:
-                view?.proceedToRequestLocation()
-            case .notDetermined:
-                view?.proceedToRequestLocation()
-            }
-        case .error(let error):
-            view?.showError(message: error.localizedDescription)
-        }
-    }
 }

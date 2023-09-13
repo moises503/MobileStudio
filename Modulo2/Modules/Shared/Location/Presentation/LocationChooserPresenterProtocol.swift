@@ -10,4 +10,6 @@ import Foundation
 protocol LocationChooserPresenterProtocol {
     func attachView(view: LocationChooserViewProtocol)
     func obtainLocationsSaved()
+    func saveLocationObtained(with location: Location)
+    func resolveLocationPermission(with locationResult: LocationPermissionResult)
 }

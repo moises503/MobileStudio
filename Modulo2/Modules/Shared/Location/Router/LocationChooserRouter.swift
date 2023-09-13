@@ -13,6 +13,8 @@ class LocationChooserRouter: LocationChooserRouterProtocol {
     static func launch() -> LocationChooserViewController {
         let viewController = LocationChooserViewController()
         viewController.presenter = LocationChooserModule.providesPresenter()
+        viewController.locationManager = LocationManagerModule.providesLocationManager()
+        viewController.locationConverter = LocationManagerModule.providesCoreLocationConverterStrategy()
         return viewController
     }
 }

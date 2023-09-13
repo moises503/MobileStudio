@@ -34,4 +34,26 @@ class LocationChooserPresenter: LocationChooserPresenterProtocol {
             }
         }
     }
+    
+    func saveLocationObtained(with location: Location) {
+    
+    }
+    
+    func resolveLocationPermission(with locationResult: LocationPermissionResult) {
+        switch locationResult {
+        case .success(let locationStatus):
+            switch locationStatus.status {
+            case .authorizedAlways:
+                view?.proceedToRequestLocation()
+            case .denied:
+                view?.permissionDenied()
+            case .request:
+                view?.proceedToRequestLocation()
+            case .notDetermined:
+                view?.proceedToRequestLocation()
+            }
+        case .error(let error):
+            view?.showError(with: error.localizedDescription)
+        }
+    }
 }
