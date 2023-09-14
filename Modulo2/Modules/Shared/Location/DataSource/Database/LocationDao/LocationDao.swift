@@ -18,9 +18,12 @@ class LocationDao: LocationDaoProtocol {
     
     func insert(using locationEntity: LocationEntity, withResult: @escaping (LocationSingleResult) -> Void) {
         do {
-            let _ = locationEntity.toNSEntityDescription(managedContext: managedContext)
-            try managedContext.save()
-            withResult(.success(locationEntity))
+            if let _ = locationEntity.toNSEntityDescription(managedContext: managedContext) {
+                try managedContext.save()
+                withResult(.success(locationEntity))
+            } else {
+                withResult(.error(.databaseError("Cannot save your location")))
+            }
         } catch {
             debugPrint("Error when insert information: \(error)")
             withResult(.error(.databaseError(error.localizedDescription)))

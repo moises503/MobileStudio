@@ -9,10 +9,6 @@ import UIKit
 
 class LocationChooserViewController: UIViewController {
     
-    var presenter: LocationChooserPresenterProtocol?
-    var locationManager: LocationManagerProtocol?
-    var locationConverter: LocationConverterStrategyProtocol?
-    
     private var scrollableContent: UIScrollView = {
         let view = UIScrollView()
         view.backgroundColor = .lightGray
@@ -44,7 +40,14 @@ class LocationChooserViewController: UIViewController {
     
     private lazy var obtainLocationFromSearchPlacesLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .left
+        label.textColor = .label
+        label.text = "Buscar la dirección"
+        label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onSerchPlace))
+        label.addGestureRecognizer(tap)
         return label
     }()
     
@@ -63,6 +66,12 @@ class LocationChooserViewController: UIViewController {
     
     private lazy var bottomConstraint = locationsTableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
     private var locations: [Location] = []
+    
+    var presenter: LocationChooserPresenterProtocol?
+    var locationManager: LocationManagerProtocol?
+    var locationConverter: LocationConverterStrategyProtocol?
+    
+    var onLocationObtained: ((Location) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +85,7 @@ class LocationChooserViewController: UIViewController {
     }
     
     private func setupViews() {
+        title = "Ubicación"
         view.backgroundColor = .systemBackground
         let safeAreaGuide = view.safeAreaLayoutGuide
         let contentLayoutGuide = scrollableContent.contentLayoutGuide
@@ -120,6 +130,10 @@ class LocationChooserViewController: UIViewController {
             self?.presenter?.resolveLocationPermission(with: locationResultPermission)
         })
     }
+    
+    @objc private func onSerchPlace() {
+        
+    }
 }
 
 extension LocationChooserViewController: UITableViewDataSource, UITableViewDelegate {
@@ -159,8 +173,16 @@ extension LocationChooserViewController: LocationChooserViewProtocol {
     func proceedToRequestLocation() {
         locationManager?.recoverLocation(onLocationObtained: { [weak self] coordinate in
             self?.locationConverter?.resolveLocation(with: coordinate, completion: { location in
-                
+                guard let location = location else {
+                    return
+                }
+                self?.presenter?.saveLocationObtained(with: location)
             })
         })
+    }
+    
+    func locationSaved(with locationObtained: Location) {
+        onLocationObtained?(locationObtained)
+        navigationController?.popViewController(animated: true)
     }
 }

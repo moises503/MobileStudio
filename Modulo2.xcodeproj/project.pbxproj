@@ -117,6 +117,7 @@
 		DFCCEE272AA3CE660074E5B2 /* GMSPlace+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE262AA3CE660074E5B2 /* GMSPlace+Extensions.swift */; };
 		DFCCEE742AAFF44C0074E5B2 /* LocationManagerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */; };
 		DFCCEE862AB145A30074E5B2 /* LocationItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE852AB145A30074E5B2 /* LocationItemTableViewCell.swift */; };
+		DFCCEE882AB2A4930074E5B2 /* LocationSavedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE872AB2A4930074E5B2 /* LocationSavedResult.swift */; };
 		EEED9D653892D56C5A0CF7B4 /* Pods_Modulo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB3C5CF667D9259B92C3B58 /* Pods_Modulo2.framework */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +256,7 @@
 		DFCCEE262AA3CE660074E5B2 /* GMSPlace+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSPlace+Extensions.swift"; sourceTree = "<group>"; };
 		DFCCEE732AAFF44C0074E5B2 /* LocationManagerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerModule.swift; sourceTree = "<group>"; };
 		DFCCEE852AB145A30074E5B2 /* LocationItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemTableViewCell.swift; sourceTree = "<group>"; };
+		DFCCEE872AB2A4930074E5B2 /* LocationSavedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSavedResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -794,6 +796,7 @@
 			children = (
 				DF8569BB2A6C42FD0092CF82 /* Location.swift */,
 				DFCCEDFD2AA393430074E5B2 /* LocationObtainedResult.swift */,
+				DFCCEE872AB2A4930074E5B2 /* LocationSavedResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1178,6 +1181,7 @@
 				D6966E6F2A4773F800374EB3 /* CoffeeShopTableViewCell.swift in Sources */,
 				DF604F022A9A8F6500CEA365 /* Location+Extensions.swift in Sources */,
 				DF604EC32A7EDD5000CEA365 /* LocationComposedResult.swift in Sources */,
+				DFCCEE882AB2A4930074E5B2 /* LocationSavedResult.swift in Sources */,
 				DF85699A2A6C40410092CF82 /* HomeViewProtocol.swift in Sources */,
 				DF8569912A6C32890092CF82 /* CoffeeShopPresenter.swift in Sources */,
 			);

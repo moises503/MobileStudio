@@ -10,11 +10,12 @@ import UIKit
 
 class LocationChooserRouter: LocationChooserRouterProtocol {
     
-    static func launch() -> LocationChooserViewController {
+    static func launch(with locationObtained: @escaping (Location) -> Void) -> LocationChooserViewController {
         let viewController = LocationChooserViewController()
         viewController.presenter = LocationChooserModule.providesPresenter()
         viewController.locationManager = LocationManagerModule.providesLocationManager()
         viewController.locationConverter = LocationManagerModule.providesCoreLocationConverterStrategy()
+        viewController.onLocationObtained = locationObtained
         return viewController
     }
 }

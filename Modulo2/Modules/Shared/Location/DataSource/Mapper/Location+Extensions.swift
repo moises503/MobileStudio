@@ -14,3 +14,17 @@ extension Array where Element == LocationEntity {
         return LocationEntityToLocationMapper().transformCollection(values: self)
     }
 }
+
+extension LocationEntity {
+    
+    func toLocation() -> Location {
+        return LocationEntityToLocationMapper().transform(value: self)
+    }
+}
+
+extension Location {
+    
+    func toLocationEntity() -> LocationEntity {
+        return LocationEntityToLocationMapper().reverseTransform(value: self)
+    }
+}

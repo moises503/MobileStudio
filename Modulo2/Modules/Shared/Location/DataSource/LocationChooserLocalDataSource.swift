@@ -26,4 +26,21 @@ class LocationChooserLocalDataSource: LocationChooserLocalDataSourceProtocol {
             }
         }
     }
+    
+    func saveLocation(with locationObtained: Location, onLocationSaved: @escaping (LocationSavedResult) -> Void) {
+        var mutableLocationObtained = locationObtained
+        mutableLocationObtained.isFavorite = true
+        locationDao.insert(using: mutableLocationObtained.toLocationEntity()) { locationSingleResult in
+            switch locationSingleResult {
+            case .success(let locationSaved):
+                if let locationSaved = locationSaved {
+                    onLocationSaved(.success(locationSaved.toLocation()))
+                } else {
+                    onLocationSaved(.error(CoffeeAppError.databaseError("Couldn't save your location")))
+                }
+            case .error(let coffeeAppError):
+                onLocationSaved(.error(coffeeAppError))
+            }
+        }
+    }
 }

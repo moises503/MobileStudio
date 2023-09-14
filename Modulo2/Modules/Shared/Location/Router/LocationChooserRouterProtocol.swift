@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 protocol LocationChooserRouterProtocol: AnyObject {
-    static func launch() -> LocationChooserViewController
+    static func launch(with locationObtained: @escaping (Location) -> Void) -> LocationChooserViewController
 }

@@ -32,6 +32,9 @@ class HomeViewController: UIViewController {
         label.text = HomeLocalizable.homeFindLocationTitle
         label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(openLocationChooser))
+        label.addGestureRecognizer(tap)
         return label
     }()
     
@@ -108,6 +111,13 @@ class HomeViewController: UIViewController {
     private func setupTableViewDelegates() {
         coffeeShopsTableView.dataSource = self
         coffeeShopsTableView.delegate = self
+    }
+    
+    @objc private func openLocationChooser() {
+        navigationController?.pushViewController(LocationChooserRouter.launch(with: { [weak self] location in
+            self?.addressLabel.text = location.address
+            self?.presenter?.obtainNearCoffeeShops(with: LocationParams(latitude: location.latitude, longitude: location.longitude))
+        }), animated: true)
     }
 }
 

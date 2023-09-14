@@ -10,7 +10,7 @@ import CoreData
 
 extension LocationEntity {
     
-    func toNSEntityDescription(managedContext: NSManagedObjectContext) -> NSEntityDescription? {
+    func toNSEntityDescription(managedContext: NSManagedObjectContext) -> NSManagedObject? {
         return LocationEntityToLocationLocalMapper(managedContext: managedContext).transform(value: self)
     }
 }

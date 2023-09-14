@@ -20,4 +20,8 @@ class LocationChooserRepository: LocationChooserRepositoryProtocol {
             onLocationObtained(onLocationObtainedResult)
         }
     }
+    
+    func saveLocation(with locationObtained: Location, onLocationSaved: @escaping (LocationSavedResult) -> Void) {
+        dataSource.saveLocation(with: locationObtained, onLocationSaved: onLocationSaved)
+    }
 }

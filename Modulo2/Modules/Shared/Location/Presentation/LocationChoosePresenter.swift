@@ -36,7 +36,14 @@ class LocationChooserPresenter: LocationChooserPresenterProtocol {
     }
     
     func saveLocationObtained(with location: Location) {
-    
+        repository.saveLocation(with: location) { [weak self] locationSavedResult in
+            switch locationSavedResult {
+            case .success(let locationSaved):
+                self?.view?.locationSaved(with: locationSaved)
+            case .error(let coffeeAppError):
+                self?.view?.showError(with: coffeeAppError.localizedDescription)
+            }
+        }
     }
     
     func resolveLocationPermission(with locationResult: LocationPermissionResult) {

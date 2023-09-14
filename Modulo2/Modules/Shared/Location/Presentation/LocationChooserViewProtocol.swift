@@ -10,6 +10,7 @@ import Foundation
 protocol LocationChooserViewProtocol: AnyObject {
     func showEmptyLocations()
     func showLocationsSaved(with locationList: [Location])
+    func locationSaved(with locationObtained: Location)
     func showError(with message: String)
     
     /// To request location permission
