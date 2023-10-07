@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class LocationChooserViewController: UIViewController {
     
@@ -132,7 +133,18 @@ class LocationChooserViewController: UIViewController {
     }
     
     @objc private func onSerchPlace() {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
         
+        let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt64(GMSPlaceField.name.rawValue) |
+                                                  UInt64(GMSPlaceField.placeID.rawValue))
+        autocompleteController.placeFields = fields
+        
+        let filter = GMSAutocompleteFilter()
+        filter.types = ["address"]
+        autocompleteController.autocompleteFilter = filter
+        
+        present(autocompleteController, animated: true, completion: nil)
     }
 }
 
@@ -186,5 +198,21 @@ extension LocationChooserViewController: LocationChooserViewProtocol {
     func locationSaved(with locationObtained: Location) {
         onLocationObtained?(locationObtained)
         navigationController?.popViewController(animated: true)
+    }
+}
+
+
+extension LocationChooserViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        debugPrint("view controller has found an error: \(error)")
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        debugPrint("view controller was cancelled")
     }
 }
