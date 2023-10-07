@@ -20,11 +20,11 @@ struct CoffeeShopsReponse : Codable {
      {
         "shops": [
             {
-                 "_id": "379837495",
+                 "id": "379837495",
                  "name": "Pico café",
                  "address": "Artz 1509",
                  "imageURL": "https://image.io/image.png",
-                 "is_favorite": false,
+                 "isFavorite": false,
                  "latitude": 13243.4843934,
                  "longitude": 12.898494,
                  "services": [

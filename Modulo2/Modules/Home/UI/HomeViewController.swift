@@ -28,9 +28,10 @@ class HomeViewController: UIViewController {
     private lazy var addressLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .black
+        label.textColor = .label
         label.text = HomeLocalizable.homeFindLocationTitle
         label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(openLocationChooser))

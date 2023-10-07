@@ -17,7 +17,7 @@ class LocationChooserLocalDataSource: LocationChooserLocalDataSourceProtocol {
     }
     
     func obtainLocationsSaved(onLocationObtained: @escaping (LocationObtainedResult) -> Void) {
-        locationDao.list(filtering: nil, andSorting: nil) { locationComposedResult in
+        locationDao.list(filtering: nil, andSorting: [NSSortDescriptor(key: "isFavorite", ascending: false)]) { locationComposedResult in
             switch(locationComposedResult) {
             case .success(let locationEntityList):
                 onLocationObtained(.success(locationEntityList.toLocationList()))
@@ -30,7 +30,7 @@ class LocationChooserLocalDataSource: LocationChooserLocalDataSourceProtocol {
     func saveLocation(with locationObtained: Location, onLocationSaved: @escaping (LocationSavedResult) -> Void) {
         var mutableLocationObtained = locationObtained
         mutableLocationObtained.isFavorite = true
-        locationDao.insert(using: mutableLocationObtained.toLocationEntity()) { locationSingleResult in
+        locationDao.update(using: mutableLocationObtained.toLocationEntity()) { locationSingleResult in
             switch locationSingleResult {
             case .success(let locationSaved):
                 if let locationSaved = locationSaved {

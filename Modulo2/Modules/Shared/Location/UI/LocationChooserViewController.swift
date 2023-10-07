@@ -30,7 +30,7 @@ class LocationChooserViewController: UIViewController {
         label.textAlignment = .left
         label.textColor = .label
         label.text = HomeLocalizable.homeFindLocationTitle
-        label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
+        label.font = UIFont.preferredFont(forTextStyle: .title3, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(onRequestLocation))
@@ -43,7 +43,7 @@ class LocationChooserViewController: UIViewController {
         label.textAlignment = .left
         label.textColor = .label
         label.text = "Buscar la dirección"
-        label.font = UIFont.preferredFont(forTextStyle: .body, weight: .semibold)
+        label.font = UIFont.preferredFont(forTextStyle: .title3, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(onSerchPlace))
@@ -146,7 +146,9 @@ extension LocationChooserViewController: UITableViewDataSource, UITableViewDeleg
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "locationItemCell") as? LocationItemTableViewCell else {
             return UITableViewCell()
         }
-        cell.address = locations[indexPath.row].address
+        let location = locations[indexPath.row]
+        cell.address = location.address
+        cell.isFavorite = location.isFavorite
         return cell
     }
 }

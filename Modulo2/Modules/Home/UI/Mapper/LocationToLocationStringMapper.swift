@@ -10,6 +10,6 @@ import Foundation
 class LocationToLocationStrinMapper: Mapper<Location, String> {
     
     override func transform(value: Location) -> String {
-        return "\(value.address) \(value.city) \(value.province)"
+        return value.address
     }
 }

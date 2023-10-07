@@ -31,19 +31,19 @@ class LocationDao: LocationDaoProtocol {
     }
     
     func update(using locationEntity: LocationEntity, withResult: @escaping (LocationSingleResult) -> Void) {
-        list(filtering: nil, andSorting: nil) { [unowned self] locationComposedResult in
+        listLocationLocalElements(filtering: NSPredicate(format: "address = %@", locationEntity.address), andSorting: [NSSortDescriptor(key: "isFavorite", ascending: false)]) { [unowned self] locationComposedResult in
             switch(locationComposedResult) {
             case .success(let locationEntities):
-                let locationToUpdate: LocationEntity? = locationEntities.filter { locationFiltered in
+                let locationToUpdate: LocationLocal? = locationEntities.filter { locationFiltered in
                     locationFiltered.latitude == locationEntity.latitude && locationFiltered.longitude == locationEntity.longitude
                 }.first
-                if locationToUpdate != nil {
+                if let locationToUpdate = locationToUpdate {
                     /// We must have only one favorite location other locations excluding this one must be non-favorite
                     if locationEntity.isFavorite {
                         self.markLocationAsNonFavorite { locationMarkAsNonFavoriteResult in
                             switch(locationMarkAsNonFavoriteResult) {
                             case .success:
-                                self.updateLocationEntity(using: locationEntity) { locationUpdateResult in
+                                self.updateLocationEntity(using: locationEntity, andLocationLocal: locationToUpdate) { locationUpdateResult in
                                     switch(locationUpdateResult) {
                                     case .success(let locationEntity):
                                         withResult(.success(locationEntity))
@@ -56,7 +56,7 @@ class LocationDao: LocationDaoProtocol {
                             }
                         }
                     } else {
-                        self.updateLocationEntity(using: locationEntity) { locationUpdateResult in
+                        self.updateLocationEntity(using: locationEntity, andLocationLocal: locationToUpdate) { locationUpdateResult in
                             switch(locationUpdateResult) {
                             case .success(let locationEntity):
                                 withResult(.success(locationEntity))
@@ -135,8 +135,13 @@ class LocationDao: LocationDaoProtocol {
         }
     }
     
-    private func updateLocationEntity(using locationEntity: LocationEntity, withResult: @escaping (LocationUpdateResult) -> Void) {
-        let _ = locationEntity.toNSEntityDescription(managedContext: managedContext)
+    private func updateLocationEntity(using locationEntity: LocationEntity, andLocationLocal: LocationLocal, withResult: @escaping (LocationUpdateResult) -> Void) {
+        andLocationLocal.address = locationEntity.address
+        andLocationLocal.city = locationEntity.city
+        andLocationLocal.province = locationEntity.province
+        andLocationLocal.latitude = locationEntity.latitude
+        andLocationLocal.longitude = locationEntity.longitude
+        andLocationLocal.isFavorite = locationEntity.isFavorite
         do {
             try managedContext.save()
             withResult(.success(locationEntity))
