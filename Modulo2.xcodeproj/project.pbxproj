@@ -40,6 +40,7 @@
 		D6F56D8F2A34FA890084EBDA /* SignUpLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D8E2A34FA890084EBDA /* SignUpLocalizable.swift */; };
 		D6F56D912A34FAE10084EBDA /* SignUpLocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D902A34FAE10084EBDA /* SignUpLocalizableKeys.swift */; };
 		D6F56D942A350C740084EBDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F56D932A350C740084EBDA /* LoginViewController.swift */; };
+		DF5338D52ADAEFD7007E1DAF /* CoffeeShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5338D42ADAEFD7007E1DAF /* CoffeeShopDetailViewController.swift */; };
 		DF604E7F2A6C54EE00CEA365 /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E7E2A6C54EE00CEA365 /* CoffeeShop.swift */; };
 		DF604E822A6C565400CEA365 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E812A6C565400CEA365 /* HomeModule.swift */; };
 		DF604E852A6C5C3700CEA365 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF604E842A6C5C3700CEA365 /* Mapper.swift */; };
@@ -179,6 +180,7 @@
 		D6F56D8E2A34FA890084EBDA /* SignUpLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocalizable.swift; sourceTree = "<group>"; };
 		D6F56D902A34FAE10084EBDA /* SignUpLocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocalizableKeys.swift; sourceTree = "<group>"; };
 		D6F56D932A350C740084EBDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DF5338D42ADAEFD7007E1DAF /* CoffeeShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopDetailViewController.swift; sourceTree = "<group>"; };
 		DF604E7E2A6C54EE00CEA365 /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		DF604E812A6C565400CEA365 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		DF604E842A6C5C3700CEA365 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 		D6F56D842A34F8B70084EBDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DF5338D32ADAEFBA007E1DAF /* CoffeeDetail */,
 				DF8569A42A6C40E90092CF82 /* Shared */,
 				D69D2C202A3E3B13004E689F /* Home */,
 				D6F56D922A350C580084EBDA /* Login */,
@@ -561,6 +564,14 @@
 				D69D2C2C2A3E4388004E689F /* LoginPresenter.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		DF5338D32ADAEFBA007E1DAF /* CoffeeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DF5338D42ADAEFD7007E1DAF /* CoffeeShopDetailViewController.swift */,
+			);
+			path = CoffeeDetail;
 			sourceTree = "<group>";
 		};
 		DF604E802A6C564A00CEA365 /* DI */ = {
@@ -1153,6 +1164,7 @@
 				DF604EB32A7ED37D00CEA365 /* UIImageView+Extensions.swift in Sources */,
 				DF604E8E2A6C673F00CEA365 /* CoffeeShopItem.swift in Sources */,
 				DFCCEE252AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift in Sources */,
+				DF5338D52ADAEFD7007E1DAF /* CoffeeShopDetailViewController.swift in Sources */,
 				DFCCEE1A2AA3B9910074E5B2 /* LocationStatus.swift in Sources */,
 				DFCCEE272AA3CE660074E5B2 /* GMSPlace+Extensions.swift in Sources */,
 				D69D2C222A3E3B40004E689F /* HomeViewController.swift in Sources */,
