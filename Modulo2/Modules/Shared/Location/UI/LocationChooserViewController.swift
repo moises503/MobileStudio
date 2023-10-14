@@ -137,7 +137,10 @@ class LocationChooserViewController: UIViewController {
         autocompleteController.delegate = self
         
         let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt64(GMSPlaceField.name.rawValue) |
-                                                  UInt64(GMSPlaceField.placeID.rawValue))
+                                                  UInt64(GMSPlaceField.placeID.rawValue) |
+                                                  UInt64(GMSPlaceField.coordinate.rawValue) |
+                                                  GMSPlaceField.addressComponents.rawValue |
+                                                  GMSPlaceField.formattedAddress.rawValue)
         autocompleteController.placeFields = fields
         
         let filter = GMSAutocompleteFilter()
@@ -205,14 +208,17 @@ extension LocationChooserViewController: LocationChooserViewProtocol {
 extension LocationChooserViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        
+        dismiss(animated: true, completion: { [weak self] in
+            let location = Location(address: place.formattedAddress ?? "", city: "", province: "", latitude: place.coordinate.latitude, longitude: place.coordinate.longitude, isFavorite: true)
+            self?.presenter?.saveLocationObtained(with: location)
+        })
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        debugPrint("view controller has found an error: \(error)")
+        dismiss(animated: true, completion: nil)
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        debugPrint("view controller was cancelled")
+        dismiss(animated: true, completion: nil)
     }
 }
