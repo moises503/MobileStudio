@@ -8,5 +8,5 @@
 import Foundation
 
 struct NetworkConfig {
-    static let baseURL = "https://coffeefinder.free.beeceptor.com/"
+    static let baseURL = "https://mobilestudiocoffeeshops.free.beeceptor.com/"
 }

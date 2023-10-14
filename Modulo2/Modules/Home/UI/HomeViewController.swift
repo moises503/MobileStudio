@@ -140,7 +140,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(CoffeeShopDetailViewController(), animated: true)
+        navigationController?.pushViewController(CoffeeShopDetailRouter.launch(using: "12345"), animated: true)
     }
 }
 
