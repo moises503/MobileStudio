@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import GoogleSignIn
+import AuthenticationServices
 
 class LoginViewController: UIViewController {
     
@@ -76,8 +79,35 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    private lazy var fbLoginButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitle("Iniciar sesión con facebook", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(facebookLogin), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var googleLoginButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitle("Iniciar sesión con Google", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(googleLogin), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var appleLoginButton: ASAuthorizationAppleIDButton = {
+        let button = ASAuthorizationAppleIDButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(appleLogin), for: .touchUpInside)
+        return button
+    }()
+    
     private lazy var bottomConstraint = signUpButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
     private var presenter: LoginPresenterProtocol?
+    private let socialManager: SocialManager = SocialManagerImpl()
+    private let appleLoginManager: AppleLoginManager = AppleLoginManagerImpl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +120,51 @@ class LoginViewController: UIViewController {
     @objc
     private func loginAction(_ sender: Any) {
         presenter?.tryToLogin(with: emailTextField.orEmpty(), and: passwordTextField.orEmpty())
+    }
+    
+    @objc private func facebookLogin(_ sender: Any) {
+        socialManager.requestLogin(with: self, using: .facebook) { [weak self] result in
+            switch result {
+            case .success(let socialAuthProfile):
+                /// Send  auth profile to your API to save user information
+                // TODO: Add proper flow to send information to the API
+                break
+            case .cancelled(let cancelledReason):
+                self?.showErrorMessage(with: cancelledReason)
+            case .error(let errorReason):
+                self?.showErrorMessage(with: errorReason)
+            }
+        }
+    }
+    
+    @objc private func googleLogin() {
+        socialManager.requestLogin(with: self, using: .google) { [weak self] result in
+            switch result {
+            case .success(let socialAuthProfile):
+                /// Send  auth profile to your API to save user information
+                // TODO: Add proper flow to send information to the API
+                break
+            case .cancelled(let cancelledReason):
+                self?.showErrorMessage(with: cancelledReason)
+            case .error(let errorReason):
+                self?.showErrorMessage(with: errorReason)
+            }
+        }
+    }
+    
+    @objc private func appleLogin() {
+        appleLoginManager.login(using: self) { [weak self] result in
+            switch result {
+            case .success(let socialAuthProfile):
+                /// Send  auth profile to your API to save user information
+                // TODO: Add proper flow to send information to the API
+                break
+            case .cancelled(let cancelledReason):
+                self?.showErrorMessage(with: cancelledReason)
+            case .error(let errorReason):
+                self?.showErrorMessage(with: errorReason)
+            }
+        }
     }
     
     @objc
@@ -111,6 +186,9 @@ class LoginViewController: UIViewController {
         contentView.addSubview(emailTextField)
         contentView.addSubview(passwordTextField)
         contentView.addSubview(loginButton)
+        contentView.addSubview(fbLoginButton)
+        contentView.addSubview(googleLoginButton)
+        contentView.addSubview(appleLoginButton)
         contentView.addSubview(signUpButton)
         
         NSLayoutConstraint.activate([
@@ -142,7 +220,19 @@ class LoginViewController: UIViewController {
             loginButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 220),
             loginButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            signUpButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 32),
+            fbLoginButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 32),
+            fbLoginButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 220),
+            fbLoginButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
+            googleLoginButton.topAnchor.constraint(equalTo: fbLoginButton.bottomAnchor, constant: 32),
+            googleLoginButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 220),
+            googleLoginButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
+            appleLoginButton.topAnchor.constraint(equalTo: googleLoginButton.bottomAnchor, constant: 32),
+            appleLoginButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 220),
+            appleLoginButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
+            signUpButton.topAnchor.constraint(equalTo: appleLoginButton.bottomAnchor, constant: 32),
             signUpButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 220),
             signUpButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             bottomConstraint
@@ -168,5 +258,11 @@ extension LoginViewController: LoginViewProtocol {
             }
         )
         )
+    }
+}
+
+extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
     }
 }

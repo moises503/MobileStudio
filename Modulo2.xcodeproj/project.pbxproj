@@ -128,6 +128,18 @@
 		DFA71D732AED66310000220B /* SessionManagerPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D722AED66310000220B /* SessionManagerPreferences.swift */; };
 		DFA71D752AED6BE30000220B /* NotificationsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D742AED6BE30000220B /* NotificationsManagerProtocol.swift */; };
 		DFA71D772AED6BF80000220B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D762AED6BF80000220B /* NotificationManager.swift */; };
+		DFA71D792AED86BA0000220B /* LoginRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D782AED86BA0000220B /* LoginRouterProtocol.swift */; };
+		DFA71D7B2AED86E70000220B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D7A2AED86E70000220B /* LoginRouter.swift */; };
+		DFA71D7E2AED8BFF0000220B /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D7D2AED8BFF0000220B /* SocialManager.swift */; };
+		DFA71D802AED8C290000220B /* SocialAuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D7F2AED8C290000220B /* SocialAuthType.swift */; };
+		DFA71D822AED8C480000220B /* SocialAuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D812AED8C480000220B /* SocialAuthResult.swift */; };
+		DFA71D842AED8C520000220B /* SocialAuthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D832AED8C520000220B /* SocialAuthProfile.swift */; };
+		DFA71D862AED8C9C0000220B /* SocialAuthStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D852AED8C9C0000220B /* SocialAuthStrategy.swift */; };
+		DFA71D882AED8D130000220B /* FacebookLoginStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D872AED8D130000220B /* FacebookLoginStrategy.swift */; };
+		DFA71D8A2AED8EF90000220B /* SocialManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D892AED8EF90000220B /* SocialManagerImpl.swift */; };
+		DFA71D8C2AED96BB0000220B /* GoogleLoginStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D8B2AED96BB0000220B /* GoogleLoginStrategy.swift */; };
+		DFA71D8E2AED9A6B0000220B /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D8D2AED9A6B0000220B /* AppleLoginManager.swift */; };
+		DFA71D902AED9C0C0000220B /* AppleLoginManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA71D8F2AED9C0C0000220B /* AppleLoginManagerImpl.swift */; };
 		DFCCEDFE2AA393430074E5B2 /* LocationObtainedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEDFD2AA393430074E5B2 /* LocationObtainedResult.swift */; };
 		DFCCEE002AA3976F0074E5B2 /* HomeLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFCCEDFF2AA3976F0074E5B2 /* HomeLocalizable.strings */; };
 		DFCCEE032AA398810074E5B2 /* HomeLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCCEE022AA398810074E5B2 /* HomeLocalizable.swift */; };
@@ -299,6 +311,18 @@
 		DFA71D722AED66310000220B /* SessionManagerPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerPreferences.swift; sourceTree = "<group>"; };
 		DFA71D742AED6BE30000220B /* NotificationsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManagerProtocol.swift; sourceTree = "<group>"; };
 		DFA71D762AED6BF80000220B /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		DFA71D782AED86BA0000220B /* LoginRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterProtocol.swift; sourceTree = "<group>"; };
+		DFA71D7A2AED86E70000220B /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		DFA71D7D2AED8BFF0000220B /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
+		DFA71D7F2AED8C290000220B /* SocialAuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuthType.swift; sourceTree = "<group>"; };
+		DFA71D812AED8C480000220B /* SocialAuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuthResult.swift; sourceTree = "<group>"; };
+		DFA71D832AED8C520000220B /* SocialAuthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuthProfile.swift; sourceTree = "<group>"; };
+		DFA71D852AED8C9C0000220B /* SocialAuthStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuthStrategy.swift; sourceTree = "<group>"; };
+		DFA71D872AED8D130000220B /* FacebookLoginStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginStrategy.swift; sourceTree = "<group>"; };
+		DFA71D892AED8EF90000220B /* SocialManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManagerImpl.swift; sourceTree = "<group>"; };
+		DFA71D8B2AED96BB0000220B /* GoogleLoginStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginStrategy.swift; sourceTree = "<group>"; };
+		DFA71D8D2AED9A6B0000220B /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
+		DFA71D8F2AED9C0C0000220B /* AppleLoginManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManagerImpl.swift; sourceTree = "<group>"; };
 		DFCCEDFD2AA393430074E5B2 /* LocationObtainedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObtainedResult.swift; sourceTree = "<group>"; };
 		DFCCEDFF2AA3976F0074E5B2 /* HomeLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = HomeLocalizable.strings; sourceTree = "<group>"; };
 		DFCCEE022AA398810074E5B2 /* HomeLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalizable.swift; sourceTree = "<group>"; };
@@ -558,6 +582,7 @@
 		D6F56D842A34F8B70084EBDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DFA71D7C2AED8BF40000220B /* Social */,
 				DF5338D32ADAEFBA007E1DAF /* CoffeeDetail */,
 				DF8569A42A6C40E90092CF82 /* Shared */,
 				D69D2C202A3E3B13004E689F /* Home */,
@@ -627,6 +652,8 @@
 				D69D2C282A3E42EC004E689F /* LoginViewProtocol.swift */,
 				D69D2C2A2A3E4303004E689F /* LoginPresenterProtocol.swift */,
 				D69D2C2C2A3E4388004E689F /* LoginPresenter.swift */,
+				DFA71D782AED86BA0000220B /* LoginRouterProtocol.swift */,
+				DFA71D7A2AED86E70000220B /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1026,6 +1053,23 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		DFA71D7C2AED8BF40000220B /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				DFA71D7D2AED8BFF0000220B /* SocialManager.swift */,
+				DFA71D7F2AED8C290000220B /* SocialAuthType.swift */,
+				DFA71D812AED8C480000220B /* SocialAuthResult.swift */,
+				DFA71D832AED8C520000220B /* SocialAuthProfile.swift */,
+				DFA71D852AED8C9C0000220B /* SocialAuthStrategy.swift */,
+				DFA71D872AED8D130000220B /* FacebookLoginStrategy.swift */,
+				DFA71D8B2AED96BB0000220B /* GoogleLoginStrategy.swift */,
+				DFA71D892AED8EF90000220B /* SocialManagerImpl.swift */,
+				DFA71D8D2AED9A6B0000220B /* AppleLoginManager.swift */,
+				DFA71D8F2AED9C0C0000220B /* AppleLoginManagerImpl.swift */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
 		DFCCEE012AA398690074E5B2 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
@@ -1296,9 +1340,11 @@
 				D69D2C2B2A3E4303004E689F /* LoginPresenterProtocol.swift in Sources */,
 				DF8569B92A6C42D80092CF82 /* LocationChooserViewProtocol.swift in Sources */,
 				DF85699E2A6C405A0092CF82 /* HomePresenter.swift in Sources */,
+				DFA71D802AED8C290000220B /* SocialAuthType.swift in Sources */,
 				DF604EC12A7EDCF800CEA365 /* LocationSingleResult.swift in Sources */,
 				DF8569C02A6C44640092CF82 /* LocationChooserRepository.swift in Sources */,
 				DF604EAF2A7EC17E00CEA365 /* StringToCoffeeShopServiceMapper.swift in Sources */,
+				DFA71D842AED8C520000220B /* SocialAuthProfile.swift in Sources */,
 				DFCCEE232AA3BED00074E5B2 /* Coordinate.swift in Sources */,
 				DF604EB92A7EDA5E00CEA365 /* LocationDatabase.swift in Sources */,
 				DF604EA72A7EB45400CEA365 /* CoffeeShopItem+Extensions.swift in Sources */,
@@ -1308,6 +1354,7 @@
 				DFCCEE182AA3B9690074E5B2 /* LocationPermissionResult.swift in Sources */,
 				DF604E9B2A7EA0C600CEA365 /* NetworkManager.swift in Sources */,
 				DF604EAB2A7EB6B700CEA365 /* HomeRepository.swift in Sources */,
+				DFA71D822AED8C480000220B /* SocialAuthResult.swift in Sources */,
 				DFCCEE0B2AA3A5E90074E5B2 /* GMSPlaceToLocationMapper.swift in Sources */,
 				DFA71D432ADAFCEF0000220B /* CoffeeLocation.swift in Sources */,
 				DF604F002A9A8F0D00CEA365 /* LocationEntityToLocationMapper.swift in Sources */,
@@ -1319,7 +1366,9 @@
 				DF604E902A6C6AA900CEA365 /* HomeDataSourceProtocol.swift in Sources */,
 				DFA71D492ADAFF150000220B /* CoffeeDetailResponse+Extension.swift in Sources */,
 				DF604EFB2A9A647F00CEA365 /* LocationEntity+Extension.swift in Sources */,
+				DFA71D7E2AED8BFF0000220B /* SocialManager.swift in Sources */,
 				DFA71D412ADAFCBC0000220B /* CoffeeProduct.swift in Sources */,
+				DFA71D862AED8C9C0000220B /* SocialAuthStrategy.swift in Sources */,
 				D6F56D7F2A34F4DA0084EBDA /* LocalizableProtocol.swift in Sources */,
 				DFA71D352ADAFAC50000220B /* CoffeeDetailLocationItem.swift in Sources */,
 				D69D2C272A3E3BC5004E689F /* AlertMessage.swift in Sources */,
@@ -1350,6 +1399,7 @@
 				D69D2C2D2A3E4388004E689F /* LoginPresenter.swift in Sources */,
 				DF604EBE2A7EDBD900CEA365 /* LocationEntity.swift in Sources */,
 				DF604F042A9A904D00CEA365 /* LocationProviderResult.swift in Sources */,
+				DFA71D882AED8D130000220B /* FacebookLoginStrategy.swift in Sources */,
 				D6F56D4F2A34CBAB0084EBDA /* AppDelegate.swift in Sources */,
 				DF8569A32A6C40DB0092CF82 /* HomeRouter.swift in Sources */,
 				DF604E9F2A7EA8FA00CEA365 /* CoffeeShopsEndPoint.swift in Sources */,
@@ -1377,6 +1427,7 @@
 				DF604E8E2A6C673F00CEA365 /* CoffeeShopItem.swift in Sources */,
 				DFA71D542ADB04390000220B /* CoffeeShopDetailPresenterProtocol.swift in Sources */,
 				DFCCEE252AA3BF530074E5B2 /* CLLocationToCoordinateMapper.swift in Sources */,
+				DFA71D8A2AED8EF90000220B /* SocialManagerImpl.swift in Sources */,
 				DFA71D4F2ADB002C0000220B /* CoffeeShopDetailRepositoryProtocol.swift in Sources */,
 				DF5338D52ADAEFD7007E1DAF /* CoffeeShopDetailViewController.swift in Sources */,
 				DFA71D642ADB09B90000220B /* ProductTableViewCell.swift in Sources */,
@@ -1386,13 +1437,16 @@
 				DFCCEE272AA3CE660074E5B2 /* GMSPlace+Extensions.swift in Sources */,
 				D69D2C222A3E3B40004E689F /* HomeViewController.swift in Sources */,
 				DFCCEE1C2AA3B9D10074E5B2 /* LocationAuthorizationType.swift in Sources */,
+				DFA71D8E2AED9A6B0000220B /* AppleLoginManager.swift in Sources */,
 				DF604E982A6C6C3000CEA365 /* CoffeeAppError.swift in Sources */,
 				DF604EB72A7ED8C100CEA365 /* LocationDb.xcdatamodeld in Sources */,
 				DF604EA22A7EAE6D00CEA365 /* CoffeeShopsEndPointProtocol.swift in Sources */,
 				DFA71D5F2ADB067B0000220B /* CoffeeShopDetailRouterProtocol.swift in Sources */,
 				DFA71D6E2AED62BD0000220B /* FirebaseTokenProvider.swift in Sources */,
 				DF8569B72A6C42C00092CF82 /* LocationChoosePresenter.swift in Sources */,
+				DFA71D902AED9C0C0000220B /* AppleLoginManagerImpl.swift in Sources */,
 				DFCCEE0F2AA3AC5A0074E5B2 /* LocationConverterStrategyProtocol.swift in Sources */,
+				DFA71D792AED86BA0000220B /* LoginRouterProtocol.swift in Sources */,
 				D615BB582A59F6E600D8238D /* CoffeeShopViewProtocol.swift in Sources */,
 				DFA71D712AED65FC0000220B /* SessionManagerPreferencesProtocol.swift in Sources */,
 				DFA71D5D2ADB05A40000220B /* CoffeeShopDetailModule.swift in Sources */,
@@ -1401,6 +1455,7 @@
 				D6F56D8F2A34FA890084EBDA /* SignUpLocalizable.swift in Sources */,
 				DF604EAD2A7EC0E200CEA365 /* CoffeeShopToCoffeeShopViewMapper.swift in Sources */,
 				DFCCEE092AA3A5CD0074E5B2 /* CLPlacemarkToLocationMapper.swift in Sources */,
+				DFA71D8C2AED96BB0000220B /* GoogleLoginStrategy.swift in Sources */,
 				DF8569B32A6C41BD0092CF82 /* LocationChooserRouter.swift in Sources */,
 				DFA71D332ADAFAA30000220B /* CoffeeDetailResponse.swift in Sources */,
 				DF604EB12A7EC24600CEA365 /* CoffeeShop+Extensions.swift in Sources */,
@@ -1411,6 +1466,7 @@
 				DF604E822A6C565400CEA365 /* HomeModule.swift in Sources */,
 				DFCCEE032AA398810074E5B2 /* HomeLocalizable.swift in Sources */,
 				DF604EC82A7EDF5000CEA365 /* LocationEntityToLocationLocalMapper.swift in Sources */,
+				DFA71D7B2AED86E70000220B /* LoginRouter.swift in Sources */,
 				DFA71D4D2ADAFFC50000220B /* CoffeeShopDetailDataSource.swift in Sources */,
 				D615BB562A59F6D400D8238D /* CoffeeShopPresenterProtocol.swift in Sources */,
 				DF604E942A6C6B3800CEA365 /* HomeDataSource.swift in Sources */,

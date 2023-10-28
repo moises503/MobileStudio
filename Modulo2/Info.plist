@@ -25,5 +25,38 @@
 			</array>
 		</dict>
 	</dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb890743339216795</string>
+        <string>com.googleusercontent.apps.513049725310-nh2jnf5h4p585m1kcmjv44ao9vo3q9c1</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>890743339216795</string>
+    <key>FacebookClientToken</key>
+    <string>629c7a9c820ce950eee2c3e4ddd2a07e</string>
+    <key>FacebookDisplayName</key>
+    <string>Coffee finder</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    <key>GIDClientID</key>
+    <string>513049725310-nh2jnf5h4p585m1kcmjv44ao9vo3q9c1.apps.googleusercontent.com</string>
+    <key>CLIENT_ID</key>
+    <string>513049725310-nh2jnf5h4p585m1kcmjv44ao9vo3q9c1.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.513049725310-nh2jnf5h4p585m1kcmjv44ao9vo3q9c1</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>mx.mobilestudio.Modulo2</string>
 </dict>
 </plist>

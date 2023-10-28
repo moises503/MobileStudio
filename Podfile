@@ -11,6 +11,10 @@ def common_pods
     pod 'GoogleMaps', '~> 8.2.0'
     pod 'FirebaseCore'
     pod 'FirebaseMessaging'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
+    pod 'GoogleSignIn'
+    pod 'GoogleSignInSwiftSupport'
 end
 
 target 'Modulo2' do
