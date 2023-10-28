@@ -8,6 +8,8 @@
 import UIKit
 import GooglePlaces
 import GoogleMaps
+import FirebaseCore
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSPlacesClient.provideAPIKey("AIzaSyALRc4iDUZP8ufpsNChu5hCDHWqhHiWT8Y")
         GMSServices.provideAPIKey("AIzaSyALRc4iDUZP8ufpsNChu5hCDHWqhHiWT8Y")
+        FirebaseApp.configure()
+        setupNotificationsManager()
         return true
     }
 
@@ -33,7 +37,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func setupNotificationsManager(){
+        let notificationManager: NotificationManagerProtocol = NotificationManager()
+        notificationManager.registerNotifications()
+    }
 
 
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+      Messaging.messaging().appDidReceiveMessage(userInfo)
+      completionHandler(.noData)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
+        print("Device token: \(deviceToken)")
+    }
 }
 

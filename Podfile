@@ -9,6 +9,8 @@ def common_pods
     pod 'Nuke', '~> 10.0'
     pod 'GooglePlaces', '~> 8.1.0'
     pod 'GoogleMaps', '~> 8.2.0'
+    pod 'FirebaseCore'
+    pod 'FirebaseMessaging'
 end
 
 target 'Modulo2' do

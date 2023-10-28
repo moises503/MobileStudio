@@ -61,6 +61,7 @@ class HomeViewController: UIViewController {
         title = HomeLocalizable.homeSreenTitle
         setupViews()
         setupTableViewDelegates()
+        presenter?.initialize()
         presenter?.attachView(view: self)
     }
     

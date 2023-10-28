@@ -21,10 +21,19 @@ class HomeModule {
         return HomeRepository(dataSource: providesDataSource())
     }
     
+    static func providesSessionManager() -> SessionManagerPreferencesProtocol {
+        return SessionManagerPreferences()
+    }
+    
+    static func providesTokenProvider() -> FirebaseTokenProviderProtocol {
+        return FirebaseTokenProvider(sessionManager: providesSessionManager())
+    }
+    
     static func providesPresenter() -> HomePresenterProtocol {
         return HomePresenter(
             locationProvider: LocationChooserModule.providesLocationProvider(),
-            homeRepository: providesRepository()
+            homeRepository: providesRepository(),
+            tokenProvider: providesTokenProvider()
         )
     }
 }
